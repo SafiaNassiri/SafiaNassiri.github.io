@@ -1,0 +1,209 @@
+:root {
+  --primary-color: #adcae3; /* Regent St Blue */
+  --dark-bg: #353e48;       /* Limed Spruce */
+  --light-bg: #95b4ce;      /* Polo Blue */
+  --text-color: #e0e0e0;    /* Light Gray */
+  --accent: #829bb4;        /* Bali Hai */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  background: url('assets/images/326b7fc4e793148f508f803cfd97d8bc.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-color);
+  margin: 0;
+  scroll-behavior: smooth;
+  z-index: 0;
+  color: var(--text-color); /* this is okay for dark backgrounds */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: rgba(53, 62, 72, 0.7); /* --dark-bg with 70% opacity */
+  backdrop-filter: blur(4px);
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--text-color); /* Changed from #bbb */
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  position: relative;
+  transition: background 0.3s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+nav a i {
+  color: #000; /* black */
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s;
+  margin: auto;
+}
+
+nav a:hover {
+  background: rgba(173, 202, 227, 0.2); /* Lighter primary */
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+section p,
+section li {
+  color: var(--dark-bg); /* Better on light container backgrounds */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+}
+
+.project {
+  background-color: rgba(149, 180, 206, 0.8); /* --light-bg with 80% opacity */
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(53, 62, 72, 0.5); /* --dark-bg with alpha */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(173, 202, 227, 0.3); /* --primary-color with alpha */
+}
+
+.project h3 {
+  color: var(--dark-bg); /* Limed Spruce for contrast on light-blue bg */
+}
+
+.project h3 img {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.project p {
+  color: var(--dark-bg); /* same reason */
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(53, 62, 72, 0.6); /* --dark-bg with 60% opacity */
+  backdrop-filter: blur(3px);
+  color: var(--text-color);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.4rem 0;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
