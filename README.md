@@ -31,9 +31,9 @@ Hi! I'm a senior Computer Science student passionate about software engineering 
 
 Feel free to reach out via the contact form on the site or connect with me on:
 
-- [LinkedIn](www.linkedin.com/in/safia-nassiri)
+- [LinkedIn](https://www.linkedin.com/in/safia-nassiri/)
 - [GitHub](https://github.com/SafiaNassiri)
 
 ---
 
-Made with 💙 by [Saf]
+Made with 💙 by Saf
