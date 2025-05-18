@@ -17,7 +17,7 @@ Hi! I'm a senior Computer Science student passionate about software engineering 
 
 ## 🌐 Live Demo
 
-[https://yourusername.github.io](https://yourusername.github.io)
+[https://safianassiri.github.io/personal-website.github.io/](https://safianassiri.github.io/personal-website.github.io/)
 
 ## 📁 Project Structure
 ```
