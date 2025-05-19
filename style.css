@@ -242,3 +242,54 @@ footer a {
   max-width: 700px;
   color: rgba(149, 180, 206, 0.8);
 }
+
+.resume-button-container {
+  margin-top: 20px;
+}
+
+.resume-button {
+  background-color: rgba(149, 180, 206, 0.8);
+  color: rgba(149, 180, 206, 0.8); 
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  color: white; 
+  background-color: rgba(149, 180, 206, 0.8);
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #7ea9e1, #acd8f5);
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+  background: linear-gradient(135deg, #5b88c7, #8bbbe1);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.download-btn:active {
+  transform: scale(0.95);
+}
+
+.download-btn i {
+  font-size: 1.2rem;
+  color: inherit;
+}
