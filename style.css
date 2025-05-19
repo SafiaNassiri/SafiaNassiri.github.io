@@ -207,3 +207,18 @@ footer a {
     padding: 1rem;
   }
 }
+
+.trello-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.trello-link:hover {
+  color: rgba(53, 62, 72, 0.6); /* Trello's official blue */
+  text-decoration: underline;
+}
