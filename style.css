@@ -19,7 +19,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   z-index: 0;
-  color: var(--text-color); /* this is okay for dark backgrounds */
+  color: var(--text-color); 
 }
 
 body::before {
@@ -53,13 +53,13 @@ body::-webkit-scrollbar-thumb {
 header {
   padding: 3rem 1rem;
   text-align: center;
-  background-color: rgba(53, 62, 72, 0.7); /* --dark-bg with 70% opacity */
+  background-color: rgba(53, 62, 72, 0.7); 
   backdrop-filter: blur(4px);
 }
 
 header p {
   font-size: 1.1rem;
-  color: var(--text-color); /* Changed from #bbb */
+  color: var(--text-color); 
 }
 
 @keyframes gradientShift {
@@ -100,7 +100,7 @@ nav a {
 }
 
 nav a i {
-  color: #000; /* black */
+  color: #000; 
 }
 
 nav a::after {
@@ -114,7 +114,7 @@ nav a::after {
 }
 
 nav a:hover {
-  background: rgba(173, 202, 227, 0.2); /* Lighter primary */
+  background: rgba(173, 202, 227, 0.2); 
   box-shadow: 0 0 10px var(--primary-color);
 }
 
@@ -131,7 +131,7 @@ section {
 
 section p,
 section li {
-  color: var(--dark-bg); /* Better on light container backgrounds */
+  color: var(--dark-bg); 
 }
 
 @keyframes fadeUp {
@@ -149,21 +149,21 @@ h2 {
 }
 
 .project {
-  background-color: rgba(149, 180, 206, 0.8); /* --light-bg with 80% opacity */
+  background-color: rgba(149, 180, 206, 0.8);
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(53, 62, 72, 0.5); /* --dark-bg with alpha */
+  box-shadow: 0 4px 12px rgba(53, 62, 72, 0.5); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(173, 202, 227, 0.3); /* --primary-color with alpha */
+  box-shadow: 0 8px 24px rgba(173, 202, 227, 0.3); 
 }
 
 .project h3 {
-  color: var(--dark-bg); /* Limed Spruce for contrast on light-blue bg */
+  color: var(--dark-bg); 
 }
 
 .project h3 img {
@@ -173,13 +173,13 @@ h2 {
 }
 
 .project p {
-  color: var(--dark-bg); /* same reason */
+  color: var(--dark-bg);
 }
 
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: rgba(53, 62, 72, 0.6); /* --dark-bg with 60% opacity */
+  background-color: rgba(53, 62, 72, 0.6); 
   backdrop-filter: blur(3px);
   color: var(--text-color);
 }
@@ -219,13 +219,13 @@ footer a {
 }
 
 .trello-link:hover {
-  color: rgba(53, 62, 72, 0.6); /* Trello's official blue */
+  color: rgba(53, 62, 72, 0.6); 
   text-decoration: underline;
 }
 
 #about {
   padding: 4rem 0;
-  background-color: rgba(0, 0, 0, 0.7); /* dark translucent bg */
+  background-color: rgba(0, 0, 0, 0.7); 
   color: #f0f0f0;
   text-align: left;
 }
