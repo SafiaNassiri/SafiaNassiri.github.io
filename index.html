@@ -11,43 +11,50 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Safia Nassiri</h1>
-      <p>
-        Senior CS Student • SWE & Game Dev Enthusiast • GameDev Committee Head
-      </p>
-      <nav>
-        <a href="/pages/projects.html">Software Projects</a>
-        <a href="/pages/games.html">Game Dev</a>
-        <a href="/pages/design.html">Design & Narrative</a>
-        <a href="/pages/devlog.html">Devlog</a>
-      </nav>
-    </header>
-
+    <div id="header-placeholder"></div>
     <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I’m a senior Computer Science student passionate about software
-          engineering, video game development, and storytelling. I enjoy
-          crafting immersive worlds and engaging narratives as much as coding.
-          With experience building full-stack websites and developing games, I’m
-          skilled in SQL databases, GDScript for Godot, C# for Unity, and
-          PHP—mostly self-taught. I’m excited to continue growing my skills and
-          creating projects that blend technical expertise with creativity.
-        </p>
-        <a
-          href="docs/Safia Nassiri_Resume_Fall2025.pdf"
-          class="download-btn"
-          download
-          ><i class="fas fa-download"></i> Download Resume</a
-        >
+      <div class="container about-flex">
+        <img
+          src="/assets/images/PFPimage.jfif"
+          alt="Safia Nassiri"
+          class="profile-pic"
+        />
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I’m a senior Computer Science student passionate about software
+            engineering, video game development, and storytelling. I enjoy
+            crafting immersive worlds and engaging narratives as much as coding.
+            With experience building full-stack websites and developing games,
+            I’m skilled in SQL databases, GDScript for Godot, C# for Unity, and
+            PHP—mostly self-taught. I’m excited to continue growing my skills
+            and creating projects that blend technical expertise with
+            creativity.
+          </p>
+          <a
+            href="/assets/resume/Safia_Nassiri_Resume_Fall2025.pdf"
+            class="download-btn"
+            download
+          >
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
       </div>
     </section>
+    <div id="footer-placeholder"></div>
+    <script>
+    async function loadComponent(id, path) {
+      const res = await fetch(path);
+      const html = await res.text();
+      document.getElementById(id).innerHTML = html;
 
-    <footer>
-      © 2025 Safia Nassiri • Reach me at
-      <a href="mailto:safianass92@gmail.com">safianass92@gmail.com</a>
-    </footer>
-  </body>
+      // If we loaded header, load navbar inside it
+      if(id === "header-placeholder") {
+        await loadComponent("navbar-placeholder", "/components/navbar.html");
+      }
+    }
+
+    loadComponent("header-placeholder", "/components/header.html");
+    loadComponent("footer-placeholder", "/components/footer.html");
+  </script>
 </html>

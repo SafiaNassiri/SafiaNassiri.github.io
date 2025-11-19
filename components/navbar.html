@@ -1,0 +1,15 @@
+<nav>
+  <a href="/pages/projects.html" class="nav-link">Software Projects</a>
+  <a href="/pages/games.html" class="nav-link">Game Dev</a>
+  <a href="/pages/design.html" class="nav-link">Design & Narrative</a>
+  <a href="/pages/devlog.html" class="nav-link">Devlog</a>
+</nav>
+
+<script>
+  const currentPage = window.location.pathname;
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    if (currentPage.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+    }
+  });
+</script>

@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Game Design & Concept Art</h1>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="projects.html">Software Engineering</a>
-        <a href="games.html">Game Dev</a>
-        <a href="devlog.html">Devlog</a>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="content">
       <h2>Concept Sketches & Designs</h2>
@@ -34,8 +26,21 @@
       <span class="skills-badge">Figma</span>
     </section>
 
-    <footer>
-      <p>© 2025 Safia Nassiri • All Rights Reserved</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+      async function loadComponent(id, path) {
+        const res = await fetch(path);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+
+        // If we loaded header, load navbar inside it
+        if (id === "header-placeholder") {
+          await loadComponent("navbar-placeholder", "/components/navbar.html");
+        }
+      }
+
+      loadComponent("header-placeholder", "/components/header.html");
+      loadComponent("footer-placeholder", "/components/footer.html");
+    </script>
   </body>
 </html>

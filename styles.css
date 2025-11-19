@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #adcae3; /* Regent St Blue */
-  --dark-bg: #353e48; /* Limed Spruce */
-  --light-bg: #95b4ce; /* Polo Blue */
-  --text-color: #e0e0e0; /* Light Gray */
-  --accent: #829bb4; /* Bali Hai */
-  --card-bg: #414a57; /* Darker card background */
+  --primary-color: #adcae3;
+  --dark-bg: #353e48;
+  --light-bg: #95b4ce;
+  --text-color: #e0e0e0;
+  --accent: #829bb4;
+  --card-bg: #414a57;
 }
 
 /* Reset & Body */
@@ -15,20 +15,33 @@
   transition: all 0.3s ease-in-out;
 }
 
+html,
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--dark-bg);
-  color: var(--text-color);
-  line-height: 1.6;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main,
+section {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
 }
 
 /* Header */
 header {
   background: var(--dark-bg);
-  height: 130px; /* Fixed height */
+  height: 130px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center content */
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
   border-bottom: 2px solid var(--accent);
@@ -91,15 +104,51 @@ nav a.active::after {
   width: 100%;
 }
 
-/* Sections */
-section,
-.content {
+/* Main content layout */
+main,
+section {
+  flex: 1;
   padding: 40px 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Hero / About */
+/* About section with profile picture */
+#about .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+#about .container img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+#about .container p {
+  flex: 1;
+  min-width: 250px;
+  font-size: 16px;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-flex img.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Download button */
 .download-btn {
   display: inline-block;
   margin-top: 15px;
@@ -167,61 +216,4 @@ section,
 .filter-btn.active {
   background: var(--primary-color);
   color: var(--dark-bg);
-}
-
-/* Embedded Itch.io */
-.embed-itch {
-  width: 100%;
-  height: 500px;
-  border: none;
-  margin: 20px 0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Skill badges */
-.skills-badge {
-  display: inline-block;
-  margin: 5px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  background: var(--accent);
-  color: var(--text-color);
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-/* Social Links */
-.social-links a {
-  display: inline-block;
-  margin: 5px 10px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background: var(--card-bg);
-  color: var(--text-color);
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-}
-
-.social-links a:hover {
-  background: var(--primary-color);
-  color: var(--dark-bg);
-}
-
-/* Footer */
-footer {
-  background: var(--dark-bg);
-  padding: 25px 20px;
-  text-align: center;
-  border-top: 2px solid var(--accent);
-}
-
-footer a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--text-color);
 }

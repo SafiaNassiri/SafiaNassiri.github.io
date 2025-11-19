@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devlog</title>
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
+  <div id="header-placeholder"></div>
   <body>
     <header>
       <h1>Devlog [TBD]</h1>
@@ -35,8 +30,21 @@
       </article>
     </section>
 
-    <footer>
-      <p>© 2025 Safia Nassiri • All Rights Reserved</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+      async function loadComponent(id, path) {
+        const res = await fetch(path);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+
+        // If we loaded header, load navbar inside it
+        if (id === "header-placeholder") {
+          await loadComponent("navbar-placeholder", "/components/navbar.html");
+        }
+      }
+
+      loadComponent("header-placeholder", "/components/header.html");
+      loadComponent("footer-placeholder", "/components/footer.html");
+    </script>
   </body>
 </html>

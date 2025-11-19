@@ -7,12 +7,7 @@
   </head>
 
   <body>
-    <header>
-      <h1>Contact</h1>
-      <nav>
-        <a href="/index.html">Home</a>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="content">
       <p>
@@ -35,5 +30,22 @@
         >
       </p>
     </section>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      async function loadComponent(id, path) {
+        const res = await fetch(path);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+
+        // If we loaded header, load navbar inside it
+        if (id === "header-placeholder") {
+          await loadComponent("navbar-placeholder", "/components/navbar.html");
+        }
+      }
+
+      loadComponent("header-placeholder", "/components/header.html");
+      loadComponent("footer-placeholder", "/components/footer.html");
+    </script>
   </body>
 </html>
