@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Development</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
     <header>
       <h1>Game Development</h1>
@@ -13,25 +13,185 @@
         <a href="index.html">Home</a>
         <a href="projects.html">Software Engineering</a>
         <a href="design.html">Design / Art</a>
+        <a href="devlog.html">Devlog</a>
       </nav>
     </header>
 
     <section class="content">
-      <h2>Released Games & Game Jams</h2>
+      <h2>Filter Projects</h2>
+      <button class="filter-btn active" onclick="filterProjects('all')">
+        All
+      </button>
+      <button class="filter-btn" onclick="filterProjects('jam')">
+        Game Jam
+      </button>
+      <button class="filter-btn" onclick="filterProjects('prototype')">
+        Prototype
+      </button>
+      <button class="filter-btn" onclick="filterProjects('released')">
+        Released
+      </button>
 
-      <div class="project-card">
-        <h3>Jam Game Title</h3>
-        <p>Short pitch. What you built. What tech/tools.</p>
-        <a href="https://itch.io/yourgame">Play on Itch.io</a>
+      <!-- Twilight of Eryndor -->
+      <div class="project-card" data-type="prototype">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/TwilightOfEryndor-LuaGame"
+            target="_blank"
+          >
+            Twilight of Eryndor
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/TwilightOfEryndor-LuaGame"
+          target="_blank"
+          >View Code</a
+        >
       </div>
 
-      <h2>Prototypes</h2>
+      <!-- Shards of Aether -->
+      <div class="project-card" data-type="prototype">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/ShardsOfAether-RustPoject"
+            target="_blank"
+          >
+            Shards of Aether
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/ShardsOfAether-RustPoject"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
 
-      <div class="project-card">
-        <h3>Movement Sandbox</h3>
-        <p>GIF + explanation of system testing.</p>
-        <a href="https://itch.io/yourproto">Prototype Link</a>
+      <!-- Cradle of Rust -->
+      <div class="project-card" data-type="prototype">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject"
+            target="_blank"
+          >
+            Cradle of Rust
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
+
+      <!-- Wolflight -->
+      <div class="project-card" data-type="prototype">
+        <h3>
+          <a href="https://github.com/SafiaNassiri/Wolflight" target="_blank">
+            Wolflight
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a href="https://github.com/SafiaNassiri/Wolflight" target="_blank"
+          >View Code</a
+        >
+      </div>
+
+      <!-- Echoes of the Grove (Game Jam) -->
+      <div class="project-card" data-type="jam">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/ACM-GameJamFall25-EchoesOfTheGrove"
+            target="_blank"
+          >
+            Echoes of the Grove
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/ACM-GameJamFall25-EchoesOfTheGrove"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
+
+      <!-- Flesh of the Forgotten -->
+      <div class="project-card" data-type="prototype">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten"
+            target="_blank"
+          >
+            Flesh of the Forgotten
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
+
+      <!-- The Last Light (Python Game) -->
+      <div class="project-card" data-type="released">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/TheLastLight-PythonGame"
+            target="_blank"
+          >
+            The Last Light
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/TheLastLight-PythonGame"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
+
+      <!-- What Remains in Sleep -->
+      <div class="project-card" data-type="released">
+        <h3>
+          <a
+            href="https://github.com/SafiaNassiri/What-Remains-in-Sleep"
+            target="_blank"
+          >
+            What Remains in Sleep
+          </a>
+        </h3>
+        <p>TBD</p>
+        <a
+          href="https://github.com/SafiaNassiri/What-Remains-in-Sleep"
+          target="_blank"
+          >View Code</a
+        >
       </div>
     </section>
+
+    <script>
+      function filterProjects(type) {
+        const cards = document.querySelectorAll(".project-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        cards.forEach((card) => {
+          if (type === "all" || card.dataset.type === type) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+
+    <footer>
+      <p>© 2025 Safia Nassiri • All Rights Reserved</p>
+    </footer>
   </body>
 </html>
