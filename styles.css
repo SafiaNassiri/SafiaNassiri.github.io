@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #111;
+  color: #eee;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 20px;
+  color: #bbb;
+  margin: 10px 0 30px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #7ddfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+.buttons .btn {
+  display: inline-block;
+  background: #222;
+  padding: 12px 24px;
+  margin: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #7ddfff;
+  border: 1px solid #333;
+}
