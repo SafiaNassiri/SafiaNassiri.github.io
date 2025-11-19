@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Design & Concept Art</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -25,9 +29,23 @@
 
     <section class="content">
       <h2>Concept Sketches & Designs</h2>
-      <p>
-        View more on
-        <a href="https://artstation.com/yourname" target="_blank">ArtStation</a>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <p style="text-align: center; margin-top: 20px">
+        Want to see more? Check out my
+        <a href="https://artstation.com/safiakillspop" target="_blank"
+          >ArtStation</a
+        >
       </p>
 
       <h2>Skills & Tools</h2>
@@ -40,7 +58,28 @@
       <span class="skills-badge">Figma</span>
     </section>
 
+    <div id="imageModal" class="image-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content-inner">
+          <div class="modal-image-wrapper">
+            <img
+              id="modalImage"
+              class="modal-image"
+              src=""
+              alt="Enlarged Art"
+            />
+          </div>
+          <div class="modal-description">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="footer-placeholder"></div>
+
     <script>
       async function loadComponent(id, path) {
         const res = await fetch(path);
@@ -48,6 +87,126 @@
         document.getElementById(id).innerHTML = html;
       }
       loadComponent("footer-placeholder", "/components/footer.html");
+    </script>
+
+    <script>
+      const images = [
+        {
+          src: "/assets/images/A2.png",
+          title: "Project A2 Concept",
+          description: "A sketched out surface level diea for a game.",
+        },
+        {
+          src: "/assets/images/concept1.jpg",
+          title: "Environment Concept 1",
+          description: "Map concept for potential souls-like game.",
+        },
+        {
+          src: "/assets/images/concept2.jpg",
+          title: "Environment Concept 2",
+          description: "Sketch of monster evolution in souls-like game.",
+        },
+        {
+          src: "/assets/images/map.jpg",
+          title: "World Map Region A",
+          description: "Sketch of zoomed out map for a viking-y world.",
+        },
+        {
+          src: "/assets/images/map2.png",
+          title: "Dungeon Layout",
+          description: "A more polished version of the viking-y world map.",
+        },
+        {
+          src: "/assets/images/map3.png",
+          title: "World Overview",
+          description: "A sketched map for an Arabian styled world.",
+        },
+        {
+          src: "/assets/images/OoA.jpg",
+          title: "Key Art: OoA",
+          description:
+            "Notes and sketch of a concept of an order for the Arabian world.",
+        },
+      ];
+
+      const track = document.getElementById("carouselTrack");
+      const nextButton = document.getElementById("nextBtn");
+      const prevButton = document.getElementById("prevBtn");
+      const imageModal = document.getElementById("imageModal");
+      const closeModalBtn = document.querySelector(".close-btn");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.getElementById("modalDescription");
+
+      let currentIndex = 0;
+
+      function createCarouselSlides() {
+        track.innerHTML = "";
+        images.forEach((imgData, index) => {
+          const slide = document.createElement("div");
+          slide.classList.add("carousel-slide");
+          slide.setAttribute("data-index", index);
+
+          const img = document.createElement("img");
+          img.src = imgData.src;
+          img.alt = imgData.title;
+
+          slide.appendChild(img);
+          track.appendChild(slide);
+        });
+      }
+
+      function updateCarousel() {
+        const slides = Array.from(track.children);
+        if (slides.length === 0) return;
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform =
+          "translateX(-" + slideWidth * currentIndex + "px)";
+      }
+
+      function openModal(index) {
+        const imgData = images[index];
+        modalImage.src = imgData.src;
+        modalImage.alt = imgData.title;
+        modalTitle.textContent = imgData.title;
+        modalDescription.textContent = imgData.description;
+        imageModal.style.display = "block";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        imageModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentIndex++;
+        if (currentIndex >= images.length) currentIndex = 0;
+        updateCarousel();
+      });
+
+      prevButton.addEventListener("click", () => {
+        currentIndex--;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        updateCarousel();
+      });
+
+      track.addEventListener("click", (event) => {
+        const slide = event.target.closest(".carousel-slide");
+        if (slide) {
+          const index = parseInt(slide.getAttribute("data-index"));
+          openModal(index);
+        }
+      });
+
+      closeModalBtn.addEventListener("click", closeModal);
+      window.addEventListener("click", (event) => {
+        if (event.target === imageModal) closeModal();
+      });
+      window.addEventListener("resize", updateCarousel);
+
+      createCarouselSlides();
+      setTimeout(updateCarousel, 100);
     </script>
   </body>
 </html>
