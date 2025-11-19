@@ -7,7 +7,7 @@
   --card-bg: #414a57; /* Darker card background */
 }
 
-/* Reset & body */
+/* Reset & Body */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,37 +25,70 @@ body {
 /* Header */
 header {
   background: var(--dark-bg);
-  padding: 30px 20px;
-  text-align: center;
+  height: 130px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center;
+  padding: 0 20px;
   border-bottom: 2px solid var(--accent);
+  text-align: center;
 }
 
 header h1 {
-  font-size: 36px;
+  font-size: 32px;
   color: var(--primary-color);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 header p {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--accent);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
+/* Nav */
 nav {
-  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 nav a {
-  color: var(--primary-color);
+  position: relative;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
-  margin: 0 15px;
-  transition: color 0.3s;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--text-color);
+  color: var(--primary-color);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: var(--primary-color);
+}
+
+nav a.active::after {
+  width: 100%;
 }
 
 /* Sections */
@@ -156,6 +189,24 @@ section,
   color: var(--text-color);
   font-weight: bold;
   font-size: 0.9em;
+}
+
+/* Social Links */
+.social-links a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  color: var(--dark-bg);
 }
 
 /* Footer */
