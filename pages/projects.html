@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div id="header-placeholder"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Projects | Safia Nassiri</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
   <body>
-    <header>
-      <h1>Software Engineering Projects</h1>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="games.html">Game Dev</a>
-        <a href="design.html">Design / Art</a>
-        <a href="devlog.html">Devlog</a>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="content">
-      <h2>Featured Projects</h2>
+      <h2>Software Engineering Projects</h2>
 
-      <!-- ARC Website Project -->
       <div class="project-card">
         <h3>
           <a
@@ -38,7 +38,6 @@
         >
       </div>
 
-      <!-- With Special Guests Band Website -->
       <div class="project-card">
         <h3>
           <a href="https://github.com/SafiaNassiri/BandWebsite" target="_blank">
@@ -54,7 +53,6 @@
         >
       </div>
 
-      <!-- Experiential Learning Subsite -->
       <div class="project-card">
         <h3>Experiential Learning Subsite</h3>
         <p>
@@ -79,7 +77,6 @@
         const html = await res.text();
         document.getElementById(id).innerHTML = html;
 
-        // If we loaded header, load navbar inside it
         if (id === "header-placeholder") {
           await loadComponent("navbar-placeholder", "/components/navbar.html");
         }

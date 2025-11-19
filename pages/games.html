@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div id="header-placeholder"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Development | Safia Nassiri</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
   <body>
-    <header>
-      <h1>Game Development</h1>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="projects.html">Software Engineering</a>
-        <a href="design.html">Design / Art</a>
-        <a href="devlog.html">Devlog</a>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <section class="content">
-      <h2>Filter Projects</h2>
-      <button class="filter-btn active" onclick="filterProjects('all')">
-        All
-      </button>
-      <button class="filter-btn" onclick="filterProjects('jam')">
-        Game Jam
-      </button>
-      <button class="filter-btn" onclick="filterProjects('prototype')">
-        Prototype
-      </button>
-      <button class="filter-btn" onclick="filterProjects('released')">
-        Released
-      </button>
+      <h2>Game Development</h2>
+      <div style="margin-bottom: 30px">
+        <button class="filter-btn active" onclick="filterProjects('all')">
+          All
+        </button>
+        <button class="filter-btn" onclick="filterProjects('jam')">
+          Game Jam
+        </button>
+        <button class="filter-btn" onclick="filterProjects('prototype')">
+          Prototype
+        </button>
+        <button class="filter-btn" onclick="filterProjects('released')">
+          Released
+        </button>
+      </div>
 
-      <!-- Twilight of Eryndor -->
       <div class="project-card" data-type="prototype">
         <h3>
           <a
@@ -45,7 +43,6 @@
         >
       </div>
 
-      <!-- Shards of Aether -->
       <div class="project-card" data-type="prototype">
         <h3>
           <a
@@ -63,7 +60,6 @@
         >
       </div>
 
-      <!-- Cradle of Rust -->
       <div class="project-card" data-type="prototype">
         <h3>
           <a
@@ -81,7 +77,6 @@
         >
       </div>
 
-      <!-- Wolflight -->
       <div class="project-card" data-type="prototype">
         <h3>
           <a href="https://github.com/SafiaNassiri/Wolflight" target="_blank">
@@ -94,7 +89,6 @@
         >
       </div>
 
-      <!-- Echoes of the Grove (Game Jam) -->
       <div class="project-card" data-type="jam">
         <h3>
           <a
@@ -112,7 +106,6 @@
         >
       </div>
 
-      <!-- Flesh of the Forgotten -->
       <div class="project-card" data-type="prototype">
         <h3>
           <a
@@ -130,7 +123,6 @@
         >
       </div>
 
-      <!-- The Last Light (Python Game) -->
       <div class="project-card" data-type="released">
         <h3>
           <a
@@ -148,7 +140,6 @@
         >
       </div>
 
-      <!-- What Remains in Sleep -->
       <div class="project-card" data-type="released">
         <h3>
           <a
@@ -192,7 +183,6 @@
         const html = await res.text();
         document.getElementById(id).innerHTML = html;
 
-        // If we loaded header, load navbar inside it
         if (id === "header-placeholder") {
           await loadComponent("navbar-placeholder", "/components/navbar.html");
         }

@@ -48,7 +48,6 @@
       const html = await res.text();
       document.getElementById(id).innerHTML = html;
 
-      // If we loaded header, load navbar inside it
       if(id === "header-placeholder") {
         await loadComponent("navbar-placeholder", "/components/navbar.html");
       }

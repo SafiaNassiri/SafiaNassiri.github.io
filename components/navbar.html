@@ -1,14 +1,16 @@
 <nav>
+  <a href="/index.html" class="nav-link">Home</a>
   <a href="/pages/projects.html" class="nav-link">Software Projects</a>
   <a href="/pages/games.html" class="nav-link">Game Dev</a>
   <a href="/pages/design.html" class="nav-link">Design & Narrative</a>
   <a href="/pages/devlog.html" class="nav-link">Devlog</a>
+  <a href="/contact.html" class="nav-link">Contact</a>
 </nav>
 
 <script>
   const currentPage = window.location.pathname;
   document.querySelectorAll(".nav-link").forEach((link) => {
-    if (currentPage.includes(link.getAttribute("href"))) {
+    if (currentPage === link.getAttribute("href")) {
       link.classList.add("active");
     }
   });
