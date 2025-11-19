@@ -20,11 +20,22 @@ Hi! I'm a senior Computer Science student passionate about software engineering 
 [https://safianassiri.github.io/](https://safianassiri.github.io/)
 
 ## Project Structure
+
 ```
 /
-├── index.html # Main HTML file
-├── style.css # 
-└── README.md # You’re reading it!
+├── assets/
+    ├── badges/
+    ├── images/
+    resume.pdf
+├── pages/
+    ├── contact.html
+    ├── design.html
+    ├── devlog.hml
+    ├── games.html
+    ├── projects.html
+├── index.html
+├── styles.css
+└── README.md
 ```
 
 ## Contact
