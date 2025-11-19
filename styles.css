@@ -4,6 +4,7 @@
   --light-bg: #95b4ce; /* Polo Blue */
   --text-color: #e0e0e0; /* Light Gray */
   --accent: #829bb4; /* Bali Hai */
+  --card-bg: #414a57; /* Darker card background */
 }
 
 body {
@@ -11,33 +12,38 @@ body {
   margin: 0;
   background: var(--dark-bg);
   color: var(--text-color);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
   background: var(--dark-bg);
   padding: 40px 20px;
-  border-bottom: 2px solid var(--light-bg);
+  border-bottom: 2px solid var(--accent);
   text-align: center;
 }
 
 header h1 {
-  font-size: 48px;
+  font-size: 42px;
   color: var(--primary-color);
   margin: 0;
-  text-shadow: 0 0 10px var(--primary-color);
 }
 
 header h2 {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--accent);
-  margin: 10px 0 30px;
+  margin: 10px 0 25px;
+}
+
+nav {
+  margin-top: 15px;
 }
 
 nav a {
   margin: 0 15px;
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
@@ -47,50 +53,56 @@ nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 50px;
+  padding: 40px 20px;
 }
 
 .buttons .btn {
   display: inline-block;
-  background: var(--light-bg);
+  background: var(--accent);
   padding: 12px 24px;
   margin: 5px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   color: var(--text-color);
-  border: 1px solid var(--accent);
-  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .buttons .btn:hover {
   background: var(--primary-color);
   color: var(--dark-bg);
+  transform: translateY(-2px);
 }
 
 .project-card {
-  background: var(--light-bg);
-  padding: 20px;
+  background: var(--card-bg);
+  padding: 25px;
   margin: 20px 0;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
 
 .filter-btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 18px;
   margin: 5px;
   background: var(--accent);
   color: var(--text-color);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
 }
 
 .filter-btn.active {
@@ -103,13 +115,15 @@ nav a:hover {
   height: 500px;
   border: none;
   margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .skills-badge {
   display: inline-block;
   margin: 5px;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 6px;
   background: var(--accent);
   color: var(--text-color);
   font-weight: bold;
@@ -119,25 +133,26 @@ nav a:hover {
 .social-links a {
   display: inline-block;
   margin: 5px 10px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background: var(--light-bg);
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent);
   color: var(--text-color);
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 .social-links a:hover {
   background: var(--primary-color);
   color: var(--dark-bg);
+  transform: translateY(-2px);
 }
 
 footer {
   background: var(--dark-bg);
-  padding: 20px;
+  padding: 25px 20px;
   text-align: center;
-  border-top: 2px solid var(--light-bg);
+  border-top: 2px solid var(--accent);
 }
 
 footer a {
@@ -148,4 +163,9 @@ footer a {
 
 footer a:hover {
   color: var(--text-color);
+}
+
+/* Smooth page transitions */
+* {
+  transition: all 0.3s ease-in-out;
 }
