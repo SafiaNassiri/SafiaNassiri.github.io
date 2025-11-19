@@ -23,9 +23,13 @@
 
     <section class="content">
       <h2>Game Development</h2>
+
       <div style="margin-bottom: 30px">
         <button class="filter-btn active" onclick="filterProjects('all')">
           All
+        </button>
+        <button class="filter-btn" onclick="filterProjects('in-dev')">
+          In Dev
         </button>
         <button class="filter-btn" onclick="filterProjects('jam')">
           Game Jam
@@ -33,35 +37,19 @@
         <button class="filter-btn" onclick="filterProjects('prototype')">
           Prototype
         </button>
+        <button class="filter-btn" onclick="filterProjects('concept')">
+          Concepts
+        </button>
         <button class="filter-btn" onclick="filterProjects('released')">
           Released
         </button>
       </div>
 
-      <div class="project-card" data-type="prototype">
-        <h3><a href="#" target="_blank">Twilight of Eryndor</a></h3>
-        <p>TBD</p>
-        <a href="#" target="_blank">View Code</a>
-      </div>
+      <div id="games-list"></div>
     </section>
 
-    <script>
-      function filterProjects(type) {
-        const cards = document.querySelectorAll(".project-card");
-        const buttons = document.querySelectorAll(".filter-btn");
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        event.target.classList.add("active");
-        cards.forEach((card) => {
-          if (type === "all" || card.dataset.type === type) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      }
-    </script>
-
     <div id="footer-placeholder"></div>
+
     <script>
       async function loadComponent(id, path) {
         const res = await fetch(path);
@@ -70,5 +58,7 @@
       }
       loadComponent("footer-placeholder", "/components/footer.html");
     </script>
+
+    <script src="/games.js"></script>
   </body>
 </html>
