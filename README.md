@@ -2,7 +2,7 @@
 
 Hi! I'm a senior Computer Science student passionate about software engineering and game development/design. This is my personal one-page portfolio website.
 
-## 🚀 Features
+## Features
 
 - One-page responsive design
 - Project showcase section
@@ -10,16 +10,16 @@ Hi! I'm a senior Computer Science student passionate about software engineering 
 - Simple contact form (mailto)
 - Clean and modern HTML/CSS (no frameworks)
 
-## 🧠 Tech Stack
+## Tech Stack
 
 - HTML5
 - CSS3
 
-## 🌐 Live Demo
+## Live Demo
 
-[https://safianassiri.github.io/personal-website.github.io/](https://safianassiri.github.io/personal-website.github.io/)
+[https://safianassiri.github.io/](https://safianassiri.github.io/)
 
-## 📁 Project Structure
+## Project Structure
 ```
 /
 ├── index.html # Main HTML file
@@ -27,7 +27,7 @@ Hi! I'm a senior Computer Science student passionate about software engineering 
 └── README.md # You’re reading it!
 ```
 
-## 📬 Contact
+## Contact
 
 Feel free to reach out via the contact form on the site or connect with me on:
 
