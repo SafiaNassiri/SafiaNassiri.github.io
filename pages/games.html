@@ -24,12 +24,13 @@
     <section class="content">
       <h2>Game Development</h2>
 
+      <!-- Filter Buttons -->
       <div style="margin-bottom: 30px">
         <button class="filter-btn active" onclick="filterProjects('all')">
           All
         </button>
-        <button class="filter-btn" onclick="filterProjects('in-dev')">
-          In Dev
+        <button class="filter-btn" onclick="filterProjects('released')">
+          Released
         </button>
         <button class="filter-btn" onclick="filterProjects('jam')">
           Game Jam
@@ -37,14 +38,12 @@
         <button class="filter-btn" onclick="filterProjects('prototype')">
           Prototype
         </button>
-        <button class="filter-btn" onclick="filterProjects('concept')">
-          Concepts
-        </button>
-        <button class="filter-btn" onclick="filterProjects('released')">
-          Released
+        <button class="filter-btn" onclick="filterProjects('in-dev')">
+          In Dev
         </button>
       </div>
 
+      <!-- Games Container -->
       <div id="games-list"></div>
     </section>
 

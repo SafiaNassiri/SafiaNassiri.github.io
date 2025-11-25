@@ -1,9 +1,9 @@
 :root {
-  --bg-color: #1a1a1d; /* Very dark grey background */
-  --card-bg: #2d2d34; /* Slightly lighter for cards */
-  --text-main: #e0e0e0; /* Off-white text */
-  --text-muted: #a0a0a0; /* Grayer text for descriptions */
-  --accent-color: #66c0f4; /* Light Blue accent (Steam-like) */
+  --bg-color: #1a1a1d;
+  --card-bg: #2d2d34;
+  --text-main: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --accent-color: #66c0f4;
   --accent-hover: #4ca3d9;
   --nav-bg: #252529;
 }
@@ -60,7 +60,6 @@ nav {
   font-weight: 600;
   font-size: 1.1rem;
   padding: 5px 5px;
-  text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
 }
@@ -98,18 +97,34 @@ h2 {
 .about-flex {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   margin-top: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .profile-pic {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--accent-color);
-  box-shadow: 0 0 20px rgba(102, 192, 244, 0.2);
+  box-shadow: 0 0 20px rgba(102, 192, 244, 0.25);
+  flex-shrink: 0;
+}
+
+.about-flex div {
+  max-width: 600px;
+}
+
+@media (max-width: 850px) {
+  .about-flex {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .about-flex div {
+    max-width: 100%;
+  }
 }
 
 .download-btn,
@@ -208,7 +223,6 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
 }
 
 .carousel-slide img:hover {
@@ -246,10 +260,7 @@ footer {
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
@@ -260,20 +271,18 @@ footer {
   background-color: var(--card-bg);
   margin: 5% auto;
   padding: 30px;
-  border: 1px solid #888;
   width: 80%;
   max-width: 1000px;
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
 }
 
 .modal-content-inner {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -287,8 +296,6 @@ footer {
   max-width: 100%;
   max-height: 60vh;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
   border-radius: 5px;
   border: 1px solid var(--accent-color);
 }
@@ -308,24 +315,19 @@ footer {
   color: var(--accent-color);
   border-bottom: 1px solid #4a4a50;
   padding-bottom: 10px;
-  margin-bottom: 15px;
 }
 
 .close-btn {
   color: #aaa;
-  float: right;
-  font-size: 38px;
-  font-weight: bold;
   position: absolute;
   top: 10px;
   right: 20px;
+  font-size: 38px;
+  font-weight: bold;
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.close-btn:hover {
   color: var(--accent-color);
-  text-decoration: none;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -336,10 +338,6 @@ footer {
   }
   .modal-content-inner {
     flex-direction: column;
-  }
-  .modal-image-wrapper {
-    min-width: unset;
-    width: 100%;
   }
   .modal-image {
     max-height: 50vh;

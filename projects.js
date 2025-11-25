@@ -2,23 +2,30 @@ const softwareProjects = [
   {
     title: "ARC (Archive. Record. Connect.)",
     type: "in-dev",
-    desc: "Full-stack MERN application for event management.",
+    desc: "A web application built with the MERN stack designed for gamers to showcase their gaming identity, track favorite games, discover new titles, and connect with a community.",
     link: "https://github.com/SafiaNassiri/ARC-WebProgramming",
     code: "https://github.com/SafiaNassiri/ARC-WebProgramming",
   },
   {
     title: "With Special Guests",
     type: "released",
-    desc: "Official band website with responsive design.",
+    desc: "A band website built to showcase With Special Guests' music, members, and demos. The project highlights the band’s identity, provides easy access to streaming and downloads, and serves as a central hub for updates, tracks, and future releases.",
     link: "https://github.com/SafiaNassiri/BandWebsite",
     code: "https://github.com/SafiaNassiri/BandWebsite",
   },
   {
     title: "SWE Experiential Learning Subsite",
     type: "released",
-    desc: "Internal tool for Rowan University (Private Repo).",
+    desc: "This project involves a fullstack website that integrates with Google's API and interacts with a database. It currently has a few issues with error handling in some files, and certain features were planned but not fully implemented. Below is a guide to setting up the project, resolving known issues, and getting it running. (Private Repo).",
     link: "https://trello.com/b/eQFvYJ94/swe-experiential-learning-subsite",
     code: "#",
+  },
+  {
+    title: "Basim Ibn Ishaq - The Binding of Isaac MOD",
+    type: "in-dev",
+    desc: "This mod introduces Basim Ibn Ishaq as a playable character in The Binding of Isaac. Agile and deadly, Basim comes equipped with piercing attacks and a special teleport ability inspired by his Assassin’s Creed skills.",
+    link: "https://github.com/SafiaNassiri/BasimIbnIshaq-MOD",
+    code: "https://github.com/SafiaNassiri/BasimIbnIshaq-MOD",
   },
 ];
 
