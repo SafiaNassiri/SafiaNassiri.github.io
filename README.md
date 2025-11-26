@@ -35,8 +35,11 @@ Hi! I'm a senior Computer Science student passionate about software engineering,
 │   ├── resume.html      # Embedded display of resume with download option
 │   ├── games.html       # Game projects with filtering
 │   └── projects.html    # Software engineering projects
+├── carousels.js
 ├── contact.html         # Contact links
+├── games.js
 ├── index.html           # Landing page / About Me
+├── projects.js
 ├── styles.css           # Global dark theme styles
 └── README.md
 ```
