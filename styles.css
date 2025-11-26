@@ -17,35 +17,33 @@ body {
   line-height: 1.6;
 }
 
+/* Links */
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 a:hover {
   color: var(--accent-hover);
 }
 
+/* Header & Nav */
 header {
   background-color: var(--nav-bg);
   text-align: center;
   padding: 2rem 0 1rem;
   border-bottom: 1px solid #333;
 }
-
 header h1 {
   margin: 0;
   font-size: 2.5rem;
   color: #fff;
   letter-spacing: 1px;
 }
-
 header p {
   color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
-
 nav {
   display: flex;
   justify-content: center;
@@ -54,7 +52,6 @@ nav {
   padding: 15px 0;
   flex-wrap: wrap;
 }
-
 .nav-link {
   color: var(--text-main);
   font-weight: 600;
@@ -63,46 +60,42 @@ nav {
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
 }
-
 .nav-link:hover {
   color: var(--accent-hover);
   border-bottom: 2px solid rgba(102, 192, 244, 0.3);
 }
-
 .nav-link.active {
   color: var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
 }
 
+/* Containers */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
-
 .content {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 20px auto; /* Reduced top margin slightly for fit */
   padding: 0 20px;
 }
-
 h2 {
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 10px;
-  margin-top: 40px;
   margin-bottom: 20px;
   color: #fff;
 }
 
+/* About Section */
 .about-flex {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 40px;
   margin-top: 40px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
-
 .profile-pic {
   width: 260px;
   height: 260px;
@@ -112,34 +105,35 @@ h2 {
   box-shadow: 0 0 20px rgba(102, 192, 244, 0.25);
   flex-shrink: 0;
 }
-
 .about-flex div {
   max-width: 600px;
 }
-
 @media (max-width: 850px) {
   .about-flex {
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
   }
   .about-flex div {
     max-width: 100%;
+    margin-top: 20px;
   }
 }
 
+/* Buttons */
 .download-btn,
 .filter-btn {
   background-color: var(--card-bg);
   color: var(--text-main);
   border: 1px solid var(--accent-color);
-  padding: 10px 20px;
+  padding: 8px 16px; /* Slightly more compact */
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   display: inline-block;
   margin-top: 10px;
+  text-decoration: none;
 }
-
 .download-btn:hover,
 .filter-btn:hover,
 .filter-btn.active {
@@ -147,23 +141,7 @@ h2 {
   color: var(--bg-color);
 }
 
-.project-card {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  padding: 25px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card h3 {
-  margin-top: 0;
-}
-
+/* Articles & Cards */
 article {
   background: var(--card-bg);
   padding: 30px;
@@ -172,6 +150,7 @@ article {
   border-radius: 0 10px 10px 0;
 }
 
+/* Skills Badge */
 .skills-badge {
   display: inline-block;
   background: #3a3a42;
@@ -182,6 +161,7 @@ article {
   border: 1px solid #555;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 40px 0;
@@ -190,45 +170,124 @@ footer {
   color: var(--text-muted);
 }
 
+/* Resume Modal */
+#resume-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#resume-modal .modal-content {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  width: 98%;
+  max-width: 1200px;
+  max-height: 95vh;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+#resume-modal iframe {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 6px;
+  overflow: auto;
+}
+#resume-modal .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+#resume-modal .close-btn:hover {
+  color: var(--accent-color);
+}
+#resume-modal .download-btn {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+#resume-modal .download-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Responsive Resume Modal */
+@media (max-width: 768px) {
+  #resume-modal .modal-content {
+    width: 95%;
+    height: 90vh;
+    padding: 10px;
+  }
+  #resume-modal iframe {
+    height: 85vh;
+  }
+  #resume-modal .close-btn {
+    font-size: 28px;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+/* Carousel */
 .carousel-container {
   position: relative;
-  max-width: 700px;
-  height: 450px;
-  margin: 20px auto 30px auto;
+  max-width: 900px;
+  height: 500px;
+  margin: 40px auto;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   border: 2px solid var(--card-bg);
   background-color: #111;
 }
 
 .carousel-track {
   display: flex;
-  height: 100%;
   transition: transform 0.5s ease-in-out;
+  height: 100%;
 }
 
 .carousel-slide {
   min-width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .carousel-slide img:hover {
   transform: scale(1.02);
 }
 
+/* Carousel Buttons */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -238,113 +297,49 @@ footer {
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 1.5rem;
-  transition: background 0.3s;
-  z-index: 10;
+  font-size: 2rem;
   border-radius: 5px;
+  z-index: 10;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .carousel-btn:hover {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: #000;
 }
 
 .carousel-btn.prev {
-  left: 10px;
+  left: 15px;
 }
+
 .carousel-btn.next {
-  right: 10px;
+  right: 15px;
 }
 
-.image-modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
-  padding-top: 60px;
+/* Responsive Carousel */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 350px;
+    width: 95%;
+  }
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
 }
 
-.modal-content {
-  background-color: var(--card-bg);
-  margin: 5% auto;
-  padding: 30px;
-  width: 80%;
-  max-width: 1000px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
-}
-
-.modal-content-inner {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.modal-image-wrapper {
-  flex: 2;
-  min-width: 300px;
-  text-align: center;
-}
-
-.modal-image {
-  max-width: 100%;
-  max-height: 60vh;
-  object-fit: contain;
-  border-radius: 5px;
+/* PDF Embed */
+.pdf-frame {
+  width: 100%;
+  height: 1200px;
   border: 1px solid var(--accent-color);
-}
-
-.modal-description {
-  flex: 1;
-  font-size: 1.1em;
-  color: var(--text-main);
-  background-color: #202024;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #3a3a42;
-}
-
-.modal-description h3 {
-  margin-top: 0;
-  color: var(--accent-color);
-  border-bottom: 1px solid #4a4a50;
-  padding-bottom: 10px;
-}
-
-.close-btn {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 38px;
-  font-weight: bold;
-}
-
-.close-btn:hover {
-  color: var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    margin: 2% auto;
-    padding: 20px;
-  }
-  .modal-content-inner {
-    flex-direction: column;
-  }
-  .modal-image {
-    max-height: 50vh;
-  }
-  .close-btn {
-    font-size: 30px;
-    top: 5px;
-    right: 15px;
+  .pdf-frame {
+    height: 1000px;
   }
 }

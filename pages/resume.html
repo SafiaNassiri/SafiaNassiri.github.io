@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Safia Nassiri</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Safia Nassiri</h1>
+      <p>
+        Senior CS Student • SWE & Game Dev Enthusiast • GameDev Committee Head
+      </p>
+      <nav>
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Software Projects</a>
+        <a href="games.html" class="nav-link">Game Dev</a>
+        <a href="design.html" class="nav-link">Design & Narrative</a>
+        <a href="resume.html" class="nav-link active">Resume</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <h2 style="margin-top: 0">Resume</h2>
+        <!-- Download Button -->
+        <a
+          href="../assets/resume/SafiaNassiri_Resume_Fall2025.pdf"
+          target="_blank"
+          class="download-btn"
+          style="margin-top: 0"
+        >
+          <i class="fas fa-download"></i> Download PDF
+        </a>
+      </div>
+
+      <!-- PDF Viewer 
+           Added #view=Fit to force the PDF to fit the container 
+           Removed inline height/margin styles to let CSS handle layout cleanly
+      -->
+      <iframe
+        class="pdf-frame"
+        src="../assets/resume/SafiaNassiri_Resume_Fall2025.pdf#view=Fit"
+        title="Resume PDF"
+      >
+        Your browser does not support PDFs.
+        <a
+          href="../assets/resume/SafiaNassiri_Resume_Fall2025.pdf"
+          target="_blank"
+        >
+          Download Resume </a
+        >.
+      </iframe>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      async function loadComponent(id, path) {
+        const res = await fetch(path);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+      }
+      loadComponent("footer-placeholder", "../components/footer.html");
+    </script>
+  </body>
+</html>
