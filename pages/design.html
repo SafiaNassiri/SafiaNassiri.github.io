@@ -18,6 +18,7 @@
       </p>
       <nav>
         <a href="../index.html" class="nav-link">Home</a>
+        <a href="pages/experience.html" class="nav-link">Experience</a>
         <a href="projects.html" class="nav-link">Software Projects</a>
         <a href="games.html" class="nav-link">Game Dev</a>
         <a href="design.html" class="nav-link active">Design & Narrative</a>
@@ -28,6 +29,7 @@
     <section class="content">
       <h2>Concept Sketches & Designs</h2>
 
+      <!-- Art Carousel -->
       <div class="carousel-container">
         <button class="carousel-btn prev" id="prevBtn">
           <i class="fas fa-chevron-left"></i>
@@ -35,7 +37,6 @@
         <button class="carousel-btn next" id="nextBtn">
           <i class="fas fa-chevron-right"></i>
         </button>
-
         <div class="carousel-track" id="carouselTrack"></div>
       </div>
 
@@ -45,6 +46,20 @@
           >ArtStation</a
         >
       </p>
+
+      <!-- Story / Book Projects Section -->
+      <h2>Story & Book Projects</h2>
+      <div id="storyCarouselContainer" class="story-cards-container">
+        <button class="story-carousel-btn story-prev" id="storyPrevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="story-card-wrapper">
+          <div class="story-track" id="storyCarouselTrack"></div>
+        </div>
+        <button class="story-carousel-btn story-next" id="storyNextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
 
       <h2>Skills & Tools</h2>
       <span class="skills-badge">Unity</span>
@@ -56,6 +71,7 @@
       <span class="skills-badge">Figma</span>
     </section>
 
+    <!-- Image Modal -->
     <div id="imageModal" class="image-modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -87,124 +103,6 @@
       loadComponent("footer-placeholder", "../components/footer.html");
     </script>
 
-    <script>
-      const images = [
-        {
-          src: "../assets/images/A2.png",
-          title: "Project A2 Concept",
-          description: "A sketched out surface level diea for a game.",
-        },
-        {
-          src: "../assets/images/concept1.jpg",
-          title: "Environment Concept 1",
-          description: "Map concept for potential souls-like game.",
-        },
-        {
-          src: "../assets/images/concept2.jpg",
-          title: "Environment Concept 2",
-          description: "Sketch of monster evolution in souls-like game.",
-        },
-        {
-          src: "../assets/images/map.jpg",
-          title: "World Map Region A",
-          description: "Sketch of zoomed out map for a viking-y world.",
-        },
-        {
-          src: "../assets/images/map2.png",
-          title: "Dungeon Layout",
-          description: "A more polished version of the viking-y world map.",
-        },
-        {
-          src: "../assets/images/map3.png",
-          title: "World Overview",
-          description: "A sketched map for an Arabian styled world.",
-        },
-        {
-          src: "../assets/images/OoA.jpg",
-          title: "Key Art: OoA",
-          description:
-            "Notes and sketch of a concept of an order for the Arabian world.",
-        },
-      ];
-
-      const track = document.getElementById("carouselTrack");
-      const nextButton = document.getElementById("nextBtn");
-      const prevButton = document.getElementById("prevBtn");
-      const imageModal = document.getElementById("imageModal");
-      const closeModalBtn = document.querySelector(".close-btn");
-      const modalImage = document.getElementById("modalImage");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalDescription = document.getElementById("modalDescription");
-
-      let currentIndex = 0;
-
-      function createCarouselSlides() {
-        track.innerHTML = "";
-        images.forEach((imgData, index) => {
-          const slide = document.createElement("div");
-          slide.classList.add("carousel-slide");
-          slide.setAttribute("data-index", index);
-
-          const img = document.createElement("img");
-          img.src = imgData.src;
-          img.alt = imgData.title;
-
-          slide.appendChild(img);
-          track.appendChild(slide);
-        });
-      }
-
-      function updateCarousel() {
-        const slides = Array.from(track.children);
-        if (slides.length === 0) return;
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        track.style.transform =
-          "translateX(-" + slideWidth * currentIndex + "px)";
-      }
-
-      function openModal(index) {
-        const imgData = images[index];
-        modalImage.src = imgData.src;
-        modalImage.alt = imgData.title;
-        modalTitle.textContent = imgData.title;
-        modalDescription.textContent = imgData.description;
-        imageModal.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeModal() {
-        imageModal.style.display = "none";
-        document.body.style.overflow = "auto";
-      }
-
-      nextButton.addEventListener("click", () => {
-        currentIndex++;
-        if (currentIndex >= images.length) currentIndex = 0;
-        updateCarousel();
-      });
-
-      prevButton.addEventListener("click", () => {
-        currentIndex--;
-        if (currentIndex < 0) currentIndex = images.length - 1;
-        updateCarousel();
-      });
-
-      track.addEventListener("click", (event) => {
-        const slide = event.target.closest(".carousel-slide");
-        if (slide) {
-          const index = parseInt(slide.getAttribute("data-index"));
-          openModal(index);
-        }
-      });
-
-      closeModalBtn.addEventListener("click", closeModal);
-      window.addEventListener("click", (event) => {
-        if (event.target === imageModal) closeModal();
-      });
-      window.addEventListener("resize", updateCarousel);
-
-      createCarouselSlides();
-      setTimeout(updateCarousel, 100);
-    </script>
+    <script src="../scripts/carousels.js"></script>
   </body>
 </html>
