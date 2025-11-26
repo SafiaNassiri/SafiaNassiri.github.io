@@ -32,7 +32,7 @@ Hi! I'm a senior Computer Science student passionate about software engineering,
 │   └── footer.html      # Reusable footer component
 ├── pages/
 │   ├── design.html      # Concept art and skills
-│   ├── devlog.html      # Development updates and blog
+│   ├── resume.html      # Embedded display of resume with download option
 │   ├── games.html       # Game projects with filtering
 │   └── projects.html    # Software engineering projects
 ├── contact.html         # Contact links
