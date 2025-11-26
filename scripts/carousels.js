@@ -1,37 +1,37 @@
 // --------------------- ART CAROUSEL ---------------------
 const images = [
   {
-    src: "/assets/images/A2.png",
+    src: "../assets/images/A2.png",
     title: "Project A2 Concept",
     description: "A sketched out surface level idea for a game.",
   },
   {
-    src: "/assets/images/concept1.jpg",
+    src: "../assets/images/concept1.jpg",
     title: "Environment Concept 1",
     description: "Map concept for potential souls-like game.",
   },
   {
-    src: "/assets/images/concept2.jpg",
+    src: "../assets/images/concept2.jpg",
     title: "Environment Concept 2",
     description: "Sketch of monster evolution in souls-like game.",
   },
   {
-    src: "/assets/images/map.jpg",
+    src: "../assets/images/map.jpg",
     title: "World Map Region A",
     description: "Sketch of zoomed out map for a viking-y world.",
   },
   {
-    src: "/assets/images/map2.png",
+    src: "../assets/images/map2.png",
     title: "Dungeon Layout",
     description: "A more polished version of the viking-y world map.",
   },
   {
-    src: "/assets/images/map3.png",
+    src: "../assets/images/map3.png",
     title: "World Overview",
     description: "A sketched map for an Arabian styled world.",
   },
   {
-    src: "/assets/images/OoA.jpg",
+    src: "../assets/images/OoA.jpg",
     title: "Key Art: OoA",
     description:
       "Notes and sketch of a concept of an order for the Arabian world.",
