@@ -8,7 +8,7 @@ const softwareProjects = [
   },
   {
     title: "With Special Guests",
-    type: "released",
+    type: "in-dev",
     desc: "A band website built to showcase With Special Guests' music, members, and demos. The project highlights the band’s identity, provides easy access to streaming and downloads, and serves as a central hub for updates, tracks, and future releases.",
     link: "https://github.com/SafiaNassiri/BandWebsite",
     code: "https://github.com/SafiaNassiri/BandWebsite",
