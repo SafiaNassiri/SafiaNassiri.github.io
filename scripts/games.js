@@ -35,6 +35,13 @@ const games = [
     code: "https://github.com/SafiaNassiri/TheLastLight-PythonGame",
   },
   {
+    title: "Limbo",
+    types: ["game jam"],
+    desc: "Limbo is a ragebait puzzle game where you play as a QA tester who gets sucked into the game they're supposed to be testing. The only way out is to entertain Zyra, an all-powerful AI overlord with zero empathy. Solve her puzzles, survive her nonsense, and try not to throw your keyboard. Made for ACM Game Jam Spring 2026, theme: Not What It Seems.",
+    link: "https://bluekillspop.itch.io/limbo",
+    code: "https://github.com/SafiaNassiri/ACM-GameJamSpring26-Limbo",
+  },
+  {
     title: "Flesh of the Forgotten",
     types: ["game jam", "prototype"],
     desc: "Flesh of the Forgotten is a dark, narrative-driven fantasy game where your choices shape the destiny of Kael, a survivor entwined with ancient godly power. Traverse a corrupted world, interact with eerie creatures, and decide how far you'll go for power, survival, or compassion. This game was developed for the BatJam 2.0 game jam, which ran for two weeks. The game's narrative and core mechanics are a direct response to the jam's theme: Symbiotic Relationship.",
@@ -69,33 +76,35 @@ function loadGames() {
 
     card.setAttribute("data-types", game.types.join(","));
 
+    const playLink =
+      game.link !== "#"
+        ? `<a href="${game.link}" target="_blank">Play / View</a>`
+        : "";
+
     const codeLink =
-      game.code !== "#"
+      game.code && game.code !== "#"
         ? `<a href="${game.code}" target="_blank">View Code</a>`
         : `<span style="color:#777; font-size:0.9rem;">Code Private / Concept</span>`;
 
     card.innerHTML = `
-      <h3>
-        ${
-          game.link !== "#"
-            ? `<a href="${game.link}" target="_blank">${game.title}</a>`
-            : game.title
-        }
-      </h3>
-      <p>${game.desc}</p>
+  <h3>${game.title}</h3>
+  <p>${game.desc}</p>
 
-      ${game.types
-        .map(
-          (t) =>
-            `<span class="skills-badge" style="font-size:0.75rem; background:#444; padding: 4px 10px; margin-right: 4px;">
-              ${t.toUpperCase()}
-            </span>`
-        )
-        .join("")}
+  ${game.types
+    .map(
+      (t) =>
+        `<span class="skills-badge" style="font-size:0.75rem; background:#444; padding: 4px 10px; margin-right: 4px;">
+          ${t.toUpperCase()}
+        </span>`,
+    )
+    .join("")}
 
-      <br><br>
-      ${codeLink}
-    `;
+  <br><br>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+    ${playLink}
+    ${codeLink}
+  </div>
+`;
     container.appendChild(card);
   });
 }
@@ -107,7 +116,7 @@ function filterProjects(type) {
   // Toggle button highlight
   buttons.forEach((btn) => btn.classList.remove("active"));
   const activeBtn = Array.from(buttons).find((b) =>
-    b.getAttribute("onclick").includes(`'${type}'`)
+    b.getAttribute("onclick").includes(`'${type}'`),
   );
   if (activeBtn) activeBtn.classList.add("active");
 
