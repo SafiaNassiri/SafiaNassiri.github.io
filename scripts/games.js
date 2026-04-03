@@ -36,7 +36,7 @@ const games = [
   },
   {
     title: "Limbo",
-    types: ["game jam"],
+    types: ["game jam", "prototype"],
     desc: "Limbo is a ragebait puzzle game where you play as a QA tester who gets sucked into the game they're supposed to be testing. The only way out is to entertain Zyra, an all-powerful AI overlord with zero empathy. Solve her puzzles, survive her nonsense, and try not to throw your keyboard. Made for ACM Game Jam Spring 2026, theme: Not What It Seems.",
     link: "https://bluekillspop.itch.io/limbo",
     code: "https://github.com/SafiaNassiri/ACM-GameJamSpring26-Limbo",

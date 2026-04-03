@@ -1,7 +1,7 @@
 const softwareProjects = [
   {
     title: "ARC (Archive. Record. Connect.)",
-    type: "in-dev",
+    type: "released",
     desc: "A web application built with the MERN stack designed for gamers to showcase their gaming identity, track favorite games, discover new titles, and connect with a community.",
     link: "https://github.com/SafiaNassiri/ARC-WebProgramming",
     code: "https://github.com/SafiaNassiri/ARC-WebProgramming",
