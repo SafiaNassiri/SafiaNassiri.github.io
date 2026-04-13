@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Development | Safia Nassiri</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Safia Nassiri</h1>
+      <p>
+        Senior CS Student • SWE & Game Dev Enthusiast • GameDev Committee Head
+      </p>
+      <nav>
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="pages/experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Software Projects</a>
+        <a href="games.html" class="nav-link active">Game Dev</a>
+        <a href="design.html" class="nav-link">Design & Narrative</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <h2>Game Development</h2>
+
+      <!-- Filter Buttons -->
+      <div style="margin-bottom: 30px">
+        <button class="filter-btn active" onclick="filterProjects('all')">
+          All
+        </button>
+        <button class="filter-btn" onclick="filterProjects('released')">
+          Released
+        </button>
+        <button class="filter-btn" onclick="filterProjects('game jam')">
+          Game Jam
+        </button>
+        <button class="filter-btn" onclick="filterProjects('prototype')">
+          Prototype
+        </button>
+        <button class="filter-btn" onclick="filterProjects('in-dev')">
+          In Dev
+        </button>
+      </div>
+
+      <!-- Games Container -->
+      <div id="games-list"></div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+      async function loadComponent(id, path) {
+        const res = await fetch(path);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+      }
+      loadComponent("footer-placeholder", "../components/footer.html");
+    </script>
+
+    <script src="../scripts/games.js"></script>
+  </body>
+</html>

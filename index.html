@@ -1,88 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Safia Nassiri | CS Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Safia Nassiri</h1>
-      <p>
-        Senior CS Student • SWE & Game Dev Enthusiast • GameDev Committee Head
-      </p>
-      <nav>
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="pages/experience.html" class="nav-link">Experience</a>
-        <a href="pages/projects.html" class="nav-link">Software Projects</a>
-        <a href="pages/games.html" class="nav-link">Game Dev</a>
-        <a href="pages/design.html" class="nav-link">Design & Narrative</a>
-        <a href="pages/resume.html" class="nav-link">Resume</a>
-      </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Safia Nassiri — Software Engineer & Game Developer</title>
+        <meta name="description" content="Senior CS student at Rowan University. Software engineer, game developer, and narrative designer.">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+            .hero-stats {
+                display: flex; gap: 2.5rem; margin-top: 3rem;
+                border-top: 1px solid var(--border); padding-top: 2rem;
+                flex-wrap: wrap;
+            }
+            .stat-item { display: flex; flex-direction: clumn; gap: 0.2rem;}
+            .stat-num {
+                font-family: var(--serif); font-size: 2rem; font-weight: 300;
+                color: var(--white); line-height: 1;
+            }
+            .stat-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1rem; text-transform: uppercase; color: var(--gold-dim); }
 
-    <section id="about">
-      <div class="container about-flex">
-        <img
-          src="assets/images/PFPimage.jfif"
-          alt="Safia Nassiri"
-          class="profile-pic"
-        />
-        <div>
-          <h2>About Me</h2>
-          <p>
-            I'm a senior Computer Science student passionate about software
-            engineering, video game development, and storytelling. I enjoy
-            crafting immersive worlds and engaging narratives as much as coding.
-            With experience building full-stack websites and developing games,
-            I'm skilled in SQL databases, GDScript for Godot, C# for Unity, and
-            PHP—mostly self-taught. I'm excited to continue growing my skills
-            and creating projects that blend technical expertise with
-            creativity.
-          </p>
+            .featured-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5px;
+                background: var(--border);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                overflow: hidden;
+            }
+            @media (max-width: 900px) { .featured-grid { grid-template-columns: 1fr; } }
 
-          <!-- Button now links to resume page -->
-          <a href="pages/resume.html" class="download-btn">
-            <i class="fas fa-file"></i> View Resume
-          </a>
+            .about-teaser {
+                display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+                align-items: center;
+            }
+            .about-quote {
+                font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+                font-weight: 300; font-style: italic;
+                color: var(--text); line-height: 1.5;
+                border-left: 2px solid var(--gold-dim);
+                padding-left: 1.5rem;
+            }
+            @media (max-width: 768px) { .about-teaser { grid-template-columns: 1fr; gap: 2rem; } }
+
+            .alt-section { background: var(--bg2); }
+        </style>
+    </head>
+    <body>
+        <div class="cursor"></div>
+        <div class="cursor-ring"></div>
+        
+        <nav>
+            <a href="index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/projects.html">Projects</a></li>
+                <li><a href="pages/games.html">Games</a></li>
+                <li><a href="pages/design.html">Design</a></li>
+                <li><a href="pages/experience.html">Experience</a></li>
+            </ul>
+            <a href="pages/resume.html" class="nav-resume">Resume ↗</a>
+            <div class="hamburger" role="button" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="pages/projects.html">Projects</a>
+            <a href="pages/games.html">Games</a>
+            <a href="pages/design.html">Design</a>
+            <a href="pages/experience.html">Experience</a>
+            <a href="pages/resume.html">Resume ↗</a>
         </div>
-      </div>
-    </section>
+        
+        <section class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-grid-line"></div>
 
-    <div id="footer-placeholder"></div>
+            <div class="hero-eyebrow">Senior CS Student · Rowan University · Glassboro NJ</div>
 
-    <script>
-      async function loadComponent(id, path) {
-        const res = await fetch(path);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
-      }
-      loadComponent("footer-placeholder", "components/footer.html");
+            <h1 class="hero-h1">
+                Software engineer<br>
+                <em>&amp; game maker.</em>
+            </h1>
 
-      // Modal JS
-      const modal = document.getElementById("resume-modal");
-      const btn = document.getElementById("view-resume-btn");
-      const span = document.querySelector(".close-btn");
+            <p class="hero-desc">
+                Building full-stack applications by day, crafting immersive game worlds by night.
+                I care about systems that feel alive — in code and in narrative.
+            </p>
 
-      btn.onclick = function (e) {
-        e.preventDefault();
-        modal.style.display = "flex";
-      };
+            <div class="hero-actions">
+                <a href="pages/projects.html" class="btn-primary">View projects</a>
+                <a href="pages/games.html" class="btn-ghost">Games &amp; Prototypes</a>
+                <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="btn-ghost">ArtStation ↗</a>
+            </div>
 
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
+            <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-num">2+</span>
+                <span class="stat-label">Years building games</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">ACM</span>
+                <span class="stat-label">GameDev Committee Head</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Technologies</span>
+            </div>
+            </div>
 
-      window.onclick = function (event) {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      };
-    </script>
-  </body>
+            <div class="hero-scroll-hint">scroll</div>
+        </section>
+        
+        <div class="skills-strip">
+            <span class="skill-pill">GDScript</span>
+            <span class="skill-pill">Godot</span>
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">Unity</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">PHP</span>
+            <span class="skill-pill">Lua</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">Figma</span>
+            <span class="skill-pill">IbisPaint</span>
+            <span class="skill-pill">Linux</span>
+        </div>
+
+        <section class="section">
+            <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-label">Selected work</div>
+                <h2>Projects I'm proud of</h2>
+                <div class="rule"></div>
+            </div>
+
+            <div class="featured-grid">
+                <a href="pages/games.html" class="project-card reveal" data-delay="0">
+                <div class="card-top">
+                    <span class="card-badge badge-game">Game Dev</span>
+                    <span class="card-arrow">↗</span>
+                </div>
+                <div class="card-title">ACM Game Project</div>
+                <p class="card-desc">Leading development and team coordination for Rowan's ACM game development committee.</p>
+                <div class="card-tags">
+                    <span class="card-tag">Godot</span>
+                    <span class="card-tag">GDScript</span>
+                    <span class="card-tag">Team Lead</span>
+                </div>
+                </a>
+
+                <a href="pages/projects.html" class="project-card reveal" data-delay="80">
+                <div class="card-top">
+                    <span class="card-badge badge-swe">Software</span>
+                    <span class="card-arrow">↗</span>
+                </div>
+                <div class="card-title">Software Engineering</div>
+                <p class="card-desc">Full-stack applications with SQL backends, REST APIs, and modern frontend tooling.</p>
+                <div class="card-tags">
+                    <span class="card-tag">SQL</span>
+                    <span class="card-tag">PHP</span>
+                    <span class="card-tag">Python</span>
+                </div>
+                </a>
+
+                <a href="pages/design.html" class="project-card reveal" data-delay="160">
+                <div class="card-top">
+                    <span class="card-badge badge-art">Design &amp; Art</span>
+                    <span class="card-arrow">↗</span>
+                </div>
+                <div class="card-title">Concept Art &amp; Narrative</div>
+                <p class="card-desc">Gothic-western illustrations, character concepts, and world-building documents.</p>
+                <div class="card-tags">
+                    <span class="card-tag">IbisPaint</span>
+                    <span class="card-tag">Figma</span>
+                    <span class="card-tag">ArtStation</span>
+                </div>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <section class="section alt-section">
+            <div class="section-inner">
+            <div class="about-teaser">
+                <div class="reveal">
+                <div class="section-label">About me</div>
+                <h2>Engineering meets storytelling</h2>
+                <div class="rule"></div>
+                <p style="color:var(--muted); margin-bottom:1.5rem; font-size:0.95rem;">
+                    I'm a senior Computer Science student at Rowan University, passionate about the intersection of technical craft and creative expression. Whether I'm debugging a Spring Boot service or designing a villain's dialogue tree, I bring the same level of care to every layer.
+                </p>
+                <p style="color:var(--muted); margin-bottom:2rem; font-size:0.95rem;">
+                    Outside of class, I head the ACM Game Dev Committee and work as an Assistant Tech Lead at the TechLounge & MakerSpace — two roles that keep me collaborating, mentoring, and shipping things.
+                </p>
+                <a href="pages/experience.html" class="btn-ghost">Full experience →</a>
+                </div>
+                <div class="reveal" data-delay="150">
+                <blockquote class="about-quote">
+                    "I enjoy crafting immersive worlds and engaging narratives as much as I enjoy coding."
+                </blockquote>
+                <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem;">
+                    <div style="display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius);">
+                    <span style="font-size:1.5rem;">🎮</span>
+                    <div>
+                        <div style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">Game Dev</div>
+                        <div style="font-size:0.9rem;color:var(--muted);">Godot, Unity, game jams, ARPG design</div>
+                    </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius);">
+                    <span style="font-size:1.5rem;">💻</span>
+                    <div>
+                        <div style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">Software Eng.</div>
+                        <div style="font-size:0.9rem;color:var(--muted);">Full-stack, SQL, PHP, Python, APIs</div>
+                    </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius);">
+                    <span style="font-size:1.5rem;">🎨</span>
+                    <div>
+                        <div style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">Illustration</div>
+                        <div style="font-size:0.9rem;color:var(--muted);">Gothic-western digital art, ArtStation</div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo">Safia Nassiri — 2025</div>
+            <div class="footer-links">
+            <a href="https://github.com/safianassiri" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/safianassiri" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
+            </div>
+            <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+
+    </body>
 </html>

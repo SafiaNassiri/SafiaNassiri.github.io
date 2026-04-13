@@ -1,48 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Software Projects | Safia Nassiri</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Safia Nassiri</h1>
-      <p>
-        Senior CS Student • SWE & Game Dev Enthusiast • GameDev Committee Head
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Safia Nassiri</title>
+  <meta name="description" content="Software engineering and game development projects by Safia Nassiri.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="experience.html">Experience</a></li>
+    </ul>
+    <a href="resume.html" class="nav-resume">Resume ↗</a>
+    <div class="hamburger" role="button" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="games.html">Games</a>
+    <a href="design.html">Design</a>
+    <a href="experience.html">Experience</a>
+    <a href="resume.html">Resume ↗</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="section-label reveal">Work</div>
+      <h1 class="reveal" style="font-size: clamp(2.2rem, 5vw, 4rem);" data-delay="80">Projects</h1>
+      <div class="rule reveal" data-delay="120"></div>
+      <p class="reveal" style="color:var(--muted); max-width:50ch; font-size:0.95rem;" data-delay="160">
+        Software engineering, game development, and everything in between.
+        Add your projects here — replace the placeholder cards with your real work.
       </p>
-      <nav>
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="experience.html" class="nav-link">Experience</a>
-        <a href="projects.html" class="nav-link active">Software Projects</a>
-        <a href="games.html" class="nav-link">Game Dev</a>
-        <a href="design.html" class="nav-link">Design & Narrative</a>
-        <a href="resume.html" class="nav-link">Resume</a>
-      </nav>
-    </header>
+    </div>
+  </section>
 
-    <section class="content">
-      <h2>Software Engineering Projects</h2>
+  <section class="section">
+    <div class="section-inner">
 
-      <div id="software-list"></div>
-    </section>
+      <div class="filter-tabs reveal">
+        <div class="filter-tab active" data-filter="all">All</div>
+        <div class="filter-tab" data-filter="swe">Software</div>
+        <div class="filter-tab" data-filter="game">Games</div>
+        <div class="filter-tab" data-filter="art">Design &amp; Art</div>
+      </div>
 
-    <div id="footer-placeholder"></div>
+      <div class="cards-grid reveal" data-delay="100">
 
-    <script>
-      async function loadComponent(id, path) {
-        const res = await fetch(path);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
-      }
-      loadComponent("footer-placeholder", "../components/footer.html");
-    </script>
+        <a href="#" class="project-card" data-type="swe">
+          <div class="card-top">
+            <span class="card-badge badge-swe">Full-stack</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">Project Title</div>
+          <p class="card-desc">
+            Brief description of what this project does, why you built it, and what problem it solves.
+            2–3 sentences max.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">SQL</span>
+            <span class="card-tag">PHP</span>
+            <span class="card-tag">Python</span>
+          </div>
+        </a>
 
-    <script src="../scripts/projects.js"></script>
-  </body>
+        <a href="#" class="project-card" data-type="swe">
+          <div class="card-top">
+            <span class="card-badge badge-swe">Backend</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">Project Title</div>
+          <p class="card-desc">
+            What this does. What you learned. What tech you used.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Java</span>
+            <span class="card-tag">Spring Boot</span>
+            <span class="card-tag">Docker</span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card" data-type="game">
+          <div class="card-top">
+            <span class="card-badge badge-game">Game Dev</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">ACM Game Dev Project</div>
+          <p class="card-desc">
+            Leading game development as committee head. Managing team, milestones, and delivery.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Godot</span>
+            <span class="card-tag">GDScript</span>
+            <span class="card-tag">Team Lead</span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card" data-type="game">
+          <div class="card-top">
+            <span class="card-badge badge-game">Game Jam</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">Game Jam Entry</div>
+          <p class="card-desc">
+            Describe your game jam project — theme, mechanic, time constraint, what you shipped.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Godot</span>
+            <span class="card-tag">72hrs</span>
+          </div>
+        </a>
+
+        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="project-card" data-type="art">
+          <div class="card-top">
+            <span class="card-badge badge-art">Concept Art</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">Illustration Portfolio</div>
+          <p class="card-desc">
+            Gothic-western digital illustration work. Characters, environments, and narrative visuals.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">IbisPaint</span>
+            <span class="card-tag">ArtStation</span>
+          </div>
+        </a>
+
+        <a href="design.html" class="project-card" data-type="art">
+          <div class="card-top">
+            <span class="card-badge badge-art">Narrative</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">Story &amp; World-building</div>
+          <p class="card-desc">
+            Book projects, story outlines, and world-building documents for games and original fiction.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Writing</span>
+            <span class="card-tag">GDD</span>
+            <span class="card-tag">Lore</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div style="margin-top:2.5rem; padding:1.5rem; border:1px dashed var(--border); border-radius:var(--radius); font-family:var(--mono); font-size:0.7rem; color:var(--muted); line-height:1.8;">
+        <span style="color:var(--gold-dim);">// To add a project:</span><br>
+        Copy a card block above → update the title, description, tags, and href → change data-type to "swe", "game", or "art".
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Safia Nassiri — 2025</div>
+    <div class="footer-links">
+      <a href="https://github.com/safianassiri" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/safianassiri" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
+    </div>
+    <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>

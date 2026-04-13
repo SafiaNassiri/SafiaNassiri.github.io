@@ -1,64 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Development | Safia Nassiri</title>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Safia Nassiri</h1>
-      <p>
-        Senior CS Student • SWE & Game Dev Enthusiast • GameDev Committee Head
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games — Safia Nassiri</title>
+  <meta name="description" content="Game development projects and prototypes by Safia Nassiri.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="experience.html">Experience</a></li>
+    </ul>
+    <a href="resume.html" class="nav-resume">Resume ↗</a>
+    <div class="hamburger" role="button" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="games.html">Games</a>
+    <a href="design.html">Design</a>
+    <a href="experience.html">Experience</a>
+    <a href="resume.html">Resume ↗</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="section-label reveal">Game Development</div>
+      <h1 class="reveal" style="font-size: clamp(2.2rem, 5vw, 4rem);" data-delay="80">Games &amp;<br>Prototypes</h1>
+      <div class="rule reveal" data-delay="120"></div>
+      <p class="reveal" style="color:var(--muted); max-width:52ch; font-size:0.95rem;" data-delay="160">
+        Game jams, released projects, experiments, and works in progress.
+        I build primarily in Godot with GDScript, and Unity with C#.
       </p>
-      <nav>
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="pages/experience.html" class="nav-link">Experience</a>
-        <a href="projects.html" class="nav-link">Software Projects</a>
-        <a href="games.html" class="nav-link active">Game Dev</a>
-        <a href="design.html" class="nav-link">Design & Narrative</a>
-        <a href="resume.html" class="nav-link">Resume</a>
-      </nav>
-    </header>
+    </div>
+  </section>
 
-    <section class="content">
-      <h2>Game Development</h2>
+  <section class="section">
+    <div class="section-inner">
 
-      <!-- Filter Buttons -->
-      <div style="margin-bottom: 30px">
-        <button class="filter-btn active" onclick="filterProjects('all')">
-          All
-        </button>
-        <button class="filter-btn" onclick="filterProjects('released')">
-          Released
-        </button>
-        <button class="filter-btn" onclick="filterProjects('game jam')">
-          Game Jam
-        </button>
-        <button class="filter-btn" onclick="filterProjects('prototype')">
-          Prototype
-        </button>
-        <button class="filter-btn" onclick="filterProjects('in-dev')">
-          In Dev
-        </button>
+      <div class="filter-tabs reveal">
+        <div class="filter-tab active" data-filter="all">All</div>
+        <div class="filter-tab" data-filter="released">Released</div>
+        <div class="filter-tab" data-filter="jam">Game Jam</div>
+        <div class="filter-tab" data-filter="prototype">Prototype</div>
+        <div class="filter-tab" data-filter="indev">In Dev</div>
       </div>
 
-      <!-- Games Container -->
-      <div id="games-list"></div>
-    </section>
+      <div class="cards-grid reveal" data-delay="100">
 
-    <div id="footer-placeholder"></div>
+        <a href="#" class="project-card" data-type="indev">
+          <div class="card-top">
+            <span class="card-badge badge-wip">In Dev</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">ACM GameDev Project</div>
+          <p class="card-desc">
+            Current project as committee head. Managing a team of students through design, implementation, and delivery.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Godot</span>
+            <span class="card-tag">GDScript</span>
+            <span class="card-tag">Team Lead</span>
+            <span class="card-tag">Fall 2025</span>
+          </div>
+        </a>
 
-    <script>
-      async function loadComponent(id, path) {
-        const res = await fetch(path);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
-      }
-      loadComponent("footer-placeholder", "../components/footer.html");
-    </script>
+        <a href="#" class="project-card" data-type="jam">
+          <div class="card-top">
+            <span class="card-badge badge-game">Game Jam</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">Game Jam Entry</div>
+          <p class="card-desc">
+            Add your jam game here — theme, mechanic, what you built in the time limit, and what you'd change.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Godot</span>
+            <span class="card-tag">48hrs</span>
+          </div>
+        </a>
 
-    <script src="../scripts/games.js"></script>
-  </body>
+        <a href="#" class="project-card" data-type="prototype">
+          <div class="card-top">
+            <span class="card-badge badge-wip">Prototype</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-title">ARPG Prototype</div>
+          <p class="card-desc">
+            Early exploration of a Path of Exile–inspired ARPG. Lore, system design, and engine architecture in progress.
+          </p>
+          <div class="card-tags">
+            <span class="card-tag">Godot</span>
+            <span class="card-tag">GDD</span>
+            <span class="card-tag">Systems Design</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div style="margin-top:2.5rem; padding:1.5rem; border:1px dashed var(--border); border-radius:var(--radius); font-family:var(--mono); font-size:0.7rem; color:var(--muted); line-height:1.8;">
+        <span style="color:var(--gold-dim);">// To add a game:</span><br>
+        Copy a card block above → fill in your title, description, tags, and href (itch.io, GitHub, etc.)<br>
+        Set data-type to: "released", "jam", "prototype", or "indev"
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Safia Nassiri — 2025</div>
+    <div class="footer-links">
+      <a href="https://github.com/safianassiri" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/safianassiri" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
+    </div>
+    <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>
