@@ -7,134 +7,80 @@
   <meta name="description" content="Senior CS student at Rowan University. Software engineer, game developer, and narrative designer.">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    /* HOME-ONLY */
-    .hero-stats {
-      display: flex; gap: 2.5rem; margin-top: 3rem;
-      border-top: 1px solid var(--border); padding-top: 2rem;
-      flex-wrap: wrap;
-    }
-    .stat-item { display: flex; flex-direction: column; gap: 0.2rem; }
-    .stat-num {
-      font-family: var(--serif); font-size: 2rem; font-weight: 300;
-      color: var(--white); line-height: 1;
-    }
-    .stat-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); }
-
-    /* FEATURED PROJECTS */
     .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
     }
-    @media (max-width: 900px) { .featured-grid { grid-template-columns: 1fr; } }
-
-    /* ABOUT TEASER */
-    .about-teaser {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-      align-items: center;
-    }
+    @media (max-width:900px) { .featured-grid { grid-template-columns:1fr; } }
+    .about-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    @media (max-width:768px) { .about-teaser { grid-template-columns:1fr; gap:2rem; } }
     .about-quote {
-      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-      font-weight: 300; font-style: italic;
-      color: var(--text); line-height: 1.5;
-      border-left: 2px solid var(--gold-dim);
-      padding-left: 1.5rem;
+      font-size: clamp(1.2rem,2.2vw,1.6rem); font-style: italic;
+      color: var(--text); line-height: 1.55;
+      border-left: 2px solid var(--moss-dim); padding-left: 1.5rem;
     }
-    @media (max-width: 768px) { .about-teaser { grid-template-columns: 1fr; gap: 2rem; } }
-
-    /* ALT SECTION */
-    .alt-section { background: var(--bg2); }
+    .about-row { display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius); }
+    .about-row-icon { font-size:1.4rem; flex-shrink:0; }
+    .about-row-cat { font-family:var(--mono); font-size:0.62rem; color:var(--bark-dim); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:2px; }
+    .about-row-desc { font-size:0.88rem; color:var(--muted); }
   </style>
 </head>
 <body>
-
-  <!-- CURSOR -->
   <div class="cursor"></div>
   <div class="cursor-ring"></div>
 
-  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="pages/projects.html">Projects</a></li>
       <li><a href="pages/games.html">Games</a></li>
-      <li><a href="pages/design.html">Design</a></li>
+      <li><a href="pages/design.html">Design &amp; Writing</a></li>
       <li><a href="pages/experience.html">Experience</a></li>
     </ul>
     <a href="pages/resume.html" class="nav-resume">Resume ↗</a>
-    <div class="hamburger" role="button" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" role="button" aria-label="Menu"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
     <a href="index.html">Home</a>
     <a href="pages/projects.html">Projects</a>
     <a href="pages/games.html">Games</a>
-    <a href="pages/design.html">Design</a>
+    <a href="pages/design.html">Design &amp; Writing</a>
     <a href="pages/experience.html">Experience</a>
     <a href="pages/resume.html">Resume ↗</a>
   </div>
 
-  <!-- HERO -->
   <section class="hero-section">
     <div class="hero-bg"></div>
     <div class="hero-grid-line"></div>
+    <div class="hero-pfp-wrap">
+      <img src="assets/images/pfp.jpg" alt="Safia Nassiri" class="hero-pfp">
+      <div class="hero-pfp-frame"></div>
+    </div>
 
     <div class="hero-eyebrow">Senior CS Student · Rowan University · Glassboro NJ</div>
-
-    <h1 class="hero-h1">
-      Software engineer<br>
-      <em>&amp; game maker.</em>
-    </h1>
-
-    <p class="hero-desc">
-      Building full-stack applications by day, crafting immersive game worlds by night.
-      I care about systems that feel alive — in code and in narrative.
-    </p>
-
+    <h1 class="hero-h1">Software engineer<br><em>&amp; world builder.</em></h1>
+    <p class="hero-desc">Building full-stack applications, crafting immersive game worlds, and writing the stories that live inside them.</p>
     <div class="hero-actions">
-      <a href="pages/projects.html" class="btn-primary">View projects</a>
-      <a href="pages/games.html" class="btn-ghost">Games &amp; Prototypes</a>
+      <a href="pages/games.html" class="btn-primary">See my games</a>
+      <a href="pages/projects.html" class="btn-ghost">Software projects</a>
       <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="btn-ghost">ArtStation ↗</a>
     </div>
-
     <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">2+</span>
-        <span class="stat-label">Years building games</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">ACM</span>
-        <span class="stat-label">GameDev Committee Head</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">5+</span>
-        <span class="stat-label">Technologies</span>
-      </div>
+      <div class="stat-item"><span class="stat-num">9</span><span class="stat-label">Games built</span></div>
+      <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Books in progress</span></div>
+      <div class="stat-item"><span class="stat-num">ACM</span><span class="stat-label">GameDev Committee Head</span></div>
     </div>
-
     <div class="hero-scroll-hint">scroll</div>
   </section>
 
-  <!-- SKILLS STRIP -->
   <div class="skills-strip">
-    <span class="skill-pill">GDScript</span>
-    <span class="skill-pill">Godot</span>
-    <span class="skill-pill">C#</span>
-    <span class="skill-pill">Unity</span>
-    <span class="skill-pill">Python</span>
-    <span class="skill-pill">SQL</span>
-    <span class="skill-pill">PHP</span>
-    <span class="skill-pill">Lua</span>
-    <span class="skill-pill">Git</span>
-    <span class="skill-pill">Figma</span>
-    <span class="skill-pill">IbisPaint</span>
-    <span class="skill-pill">Linux</span>
+    <span class="skill-pill">GDScript</span><span class="skill-pill">Godot</span>
+    <span class="skill-pill">C#</span><span class="skill-pill">Unity</span>
+    <span class="skill-pill">Lua / Love2D</span><span class="skill-pill">Rust</span>
+    <span class="skill-pill">Python</span><span class="skill-pill">SQL</span>
+    <span class="skill-pill">PHP</span><span class="skill-pill">MERN</span>
+    <span class="skill-pill">Java</span><span class="skill-pill">Git</span>
   </div>
 
   <!-- FEATURED WORK -->
@@ -142,115 +88,67 @@
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-label">Selected work</div>
-        <h2>Projects I'm proud of</h2>
+        <h2>What I've been building</h2>
         <div class="rule"></div>
       </div>
-
       <div class="featured-grid">
         <a href="pages/games.html" class="project-card reveal" data-delay="0">
-          <div class="card-top">
-            <span class="card-badge badge-game">Game Dev</span>
-            <span class="card-arrow">↗</span>
-          </div>
-          <div class="card-title">ACM Game Project</div>
-          <p class="card-desc">Leading development and team coordination for Rowan's ACM game development committee.</p>
-          <div class="card-tags">
-            <span class="card-tag">Godot</span>
-            <span class="card-tag">GDScript</span>
-            <span class="card-tag">Team Lead</span>
-          </div>
+          <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span><span class="card-arrow">↗</span></div>
+          <div class="card-title">Limbo</div>
+          <p class="card-desc">A ragebait puzzle game where you play as a QA tester sucked into the game they're testing. Made for ACM Game Jam Spring 2026.</p>
+          <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">itch.io</span></div>
         </a>
-
         <a href="pages/projects.html" class="project-card reveal" data-delay="80">
-          <div class="card-top">
-            <span class="card-badge badge-swe">Software</span>
-            <span class="card-arrow">↗</span>
-          </div>
-          <div class="card-title">Software Engineering</div>
-          <p class="card-desc">Full-stack applications with SQL backends, REST APIs, and modern frontend tooling.</p>
-          <div class="card-tags">
-            <span class="card-tag">SQL</span>
-            <span class="card-tag">PHP</span>
-            <span class="card-tag">Python</span>
-          </div>
+          <div class="card-top"><span class="card-badge badge-swe">Full-stack</span><span class="card-arrow">↗</span></div>
+          <div class="card-title">ARC</div>
+          <p class="card-desc">Archive. Record. Connect. — a MERN stack web app for gamers to showcase their identity, track favorites, and discover new titles.</p>
+          <div class="card-tags"><span class="card-tag">MERN</span><span class="card-tag">MongoDB</span><span class="card-tag">React</span></div>
         </a>
-
         <a href="pages/design.html" class="project-card reveal" data-delay="160">
-          <div class="card-top">
-            <span class="card-badge badge-art">Design &amp; Art</span>
-            <span class="card-arrow">↗</span>
-          </div>
-          <div class="card-title">Concept Art &amp; Narrative</div>
-          <p class="card-desc">Gothic-western illustrations, character concepts, and world-building documents.</p>
-          <div class="card-tags">
-            <span class="card-tag">IbisPaint</span>
-            <span class="card-tag">Figma</span>
-            <span class="card-tag">ArtStation</span>
-          </div>
+          <div class="card-top"><span class="card-badge badge-art">World-building</span><span class="card-arrow">↗</span></div>
+          <div class="card-title">The Raven's Descent</div>
+          <p class="card-desc">A 6-book fantasy universe spanning two duologies, a standalone, and a short story collection. Maps, factions, lore, and counting.</p>
+          <div class="card-tags"><span class="card-tag">Fantasy</span><span class="card-tag">6 books</span><span class="card-tag">2 universes</span></div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT TEASER -->
+  <!-- ABOUT -->
   <section class="section alt-section">
     <div class="section-inner">
       <div class="about-teaser">
         <div class="reveal">
           <div class="section-label">About me</div>
-          <h2>Engineering meets storytelling</h2>
+          <h2>Code meets craft</h2>
           <div class="rule"></div>
-          <p style="color:var(--muted); margin-bottom:1.5rem; font-size:0.95rem;">
-            I'm a senior Computer Science student at Rowan University, passionate about the intersection of technical craft and creative expression. Whether I'm debugging a Spring Boot service or designing a villain's dialogue tree, I bring the same level of care to every layer.
-          </p>
-          <p style="color:var(--muted); margin-bottom:2rem; font-size:0.95rem;">
-            Outside of class, I head the ACM Game Dev Committee and work as an Assistant Tech Lead at the TechLounge & MakerSpace — two roles that keep me collaborating, mentoring, and shipping things.
-          </p>
+          <p style="color:var(--muted);margin-bottom:1.5rem;font-size:0.95rem;">I'm a senior Computer Science student at Rowan University with a passion for building things that feel alive — whether that's a responsive web app, a game with a branching narrative, or a fantasy world with centuries of history behind it.</p>
+          <p style="color:var(--muted);margin-bottom:2rem;font-size:0.95rem;">Outside of class I head the ACM Game Dev Committee and work as Assistant Tech Lead at the TechLounge &amp; MakerSpace, keeping me mentoring, shipping, and always learning.</p>
           <a href="pages/experience.html" class="btn-ghost">Full experience →</a>
         </div>
-        <div class="reveal" data-delay="150">
-          <blockquote class="about-quote">
-            "I enjoy crafting immersive worlds and engaging narratives as much as I enjoy coding."
-          </blockquote>
-          <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem;">
-            <div style="display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius);">
-              <span style="font-size:1.5rem;">🎮</span>
-              <div>
-                <div style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">Game Dev</div>
-                <div style="font-size:0.9rem;color:var(--muted);">Godot, Unity, game jams, ARPG design</div>
-              </div>
-            </div>
-            <div style="display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius);">
-              <span style="font-size:1.5rem;">💻</span>
-              <div>
-                <div style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">Software Eng.</div>
-                <div style="font-size:0.9rem;color:var(--muted);">Full-stack, SQL, PHP, Python, APIs</div>
-              </div>
-            </div>
-            <div style="display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius);">
-              <span style="font-size:1.5rem;">🎨</span>
-              <div>
-                <div style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;">Illustration</div>
-                <div style="font-size:0.9rem;color:var(--muted);">Gothic-western digital art, ArtStation</div>
-              </div>
-            </div>
+        <div class="reveal" data-delay="120">
+          <blockquote class="about-quote">"I enjoy crafting immersive worlds and engaging narratives as much as I enjoy coding."</blockquote>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem;">
+            <div class="about-row"><span class="about-row-icon">🎮</span><div><div class="about-row-cat">Game Dev</div><div class="about-row-desc">9 games — Godot, Unity, Love2D, Pygame, Rust</div></div></div>
+            <div class="about-row"><span class="about-row-icon">💻</span><div><div class="about-row-cat">Software Eng.</div><div class="about-row-desc">Full-stack, MERN, SQL, PHP, Java, Spring Boot</div></div></div>
+            <div class="about-row"><span class="about-row-icon">📖</span><div><div class="about-row-cat">Writing &amp; World-building</div><div class="about-row-desc">10+ novels in progress across 2 universes</div></div></div>
+            <div class="about-row"><span class="about-row-icon">🎨</span><div><div class="about-row-cat">Illustration</div><div class="about-row-desc">Gothic-western concept art on ArtStation</div></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Safia Nassiri — 2025</div>
     <div class="footer-links">
-      <a href="https://github.com/safianassiri" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener">GitHub</a>
       <a href="https://linkedin.com/in/safianassiri" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
+      <a href="https://bluekillspop.itch.io" target="_blank" rel="noopener">itch.io</a>
     </div>
     <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
   </footer>
-
   <script src="assets/js/main.js"></script>
 </body>
 </html>

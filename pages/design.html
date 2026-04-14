@@ -3,129 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design &amp; Narrative — Safia Nassiri</title>
-  <meta name="description" content="Concept art, illustration, and narrative design by Safia Nassiri.">
+  <title>Design &amp; Writing — Safia Nassiri</title>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    .art-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.5px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin-bottom: 3rem;
-    }
-    .art-card {
-      background: var(--bg2);
-      aspect-ratio: 4/5;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1.25rem;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: background var(--transition);
-    }
-    .art-card:hover { background: var(--bg3); }
-    .art-card-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      opacity: 0.15;
-    }
-    .art-card img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.7;
-      transition: opacity var(--transition);
-    }
-    .art-card:hover img { opacity: 0.85; }
-    .art-card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(12,11,9,0.85) 0%, transparent 55%);
-    }
-    .art-card-info { position: relative; z-index: 1; }
-    .art-card-title { font-size: 0.95rem; color: var(--white); font-weight: 400; }
-    .art-card-sub { font-family: var(--mono); font-size: 0.6rem; color: var(--gold-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
-    .add-art-hint {
-      border: 1px dashed var(--border2);
-      aspect-ratio: 4/5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      color: var(--muted);
-      text-align: center;
-      padding: 1rem;
-      background: var(--bg2);
-    }
-    .story-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      background: var(--bg2);
-      transition: border-color var(--transition);
-    }
-    .story-card:hover { border-color: var(--border2); }
-    .story-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .story-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-    .story-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-  </style>
 </head>
 <body>
-
-  <div class="cursor"></div>
-  <div class="cursor-ring"></div>
-
+  <div class="cursor"></div><div class="cursor-ring"></div>
   <nav>
     <a href="../index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="games.html">Games</a></li>
-      <li><a href="design.html">Design</a></li>
+      <li><a href="design.html">Design &amp; Writing</a></li>
       <li><a href="experience.html">Experience</a></li>
     </ul>
     <a href="resume.html" class="nav-resume">Resume ↗</a>
-    <div class="hamburger" role="button" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" role="button" aria-label="Menu"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
-    <a href="../index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="games.html">Games</a>
-    <a href="design.html">Design</a>
-    <a href="experience.html">Experience</a>
-    <a href="resume.html">Resume ↗</a>
+    <a href="../index.html">Home</a><a href="projects.html">Projects</a>
+    <a href="games.html">Games</a><a href="design.html">Design &amp; Writing</a>
+    <a href="experience.html">Experience</a><a href="resume.html">Resume ↗</a>
   </div>
 
   <section class="page-hero">
     <div class="page-hero-inner">
-      <div class="section-label reveal">Creative work</div>
-      <h1 class="reveal" style="font-size: clamp(2.2rem, 5vw, 4rem);" data-delay="80">Design &amp;<br>Narrative</h1>
+      <div class="section-label reveal">Creative Work</div>
+      <h1 class="reveal" style="font-size:clamp(2.2rem,5vw,4rem);" data-delay="80">Design &amp;<br>Writing</h1>
       <div class="rule reveal" data-delay="120"></div>
-      <p class="reveal" style="color:var(--muted); max-width:52ch; font-size:0.95rem;" data-delay="160">
-        Concept art, illustration, and the stories that live inside the games I build.
-        Gothic-western aesthetics, digital illustration, world-building.
-      </p>
+      <p class="reveal" style="color:var(--muted);max-width:54ch;font-size:0.95rem;" data-delay="160">Concept art, world maps, game design documents, and 10+ books spread across two fantasy universes. The stories that power the games I build.</p>
       <div class="reveal" data-delay="200" style="margin-top:1.5rem;">
-        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="btn-ghost">
-          View ArtStation ↗
-        </a>
+        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="btn-ghost">ArtStation ↗</a>
       </div>
     </div>
   </section>
@@ -134,78 +42,186 @@
   <section class="section">
     <div class="section-inner">
       <div class="section-header reveal">
-        <div class="section-label">Illustration</div>
-        <h2>Concept Sketches &amp; Designs</h2>
+        <div class="section-label">Visual Work</div>
+        <h2>Concept Art &amp; Design Docs</h2>
         <div class="rule"></div>
       </div>
 
-      <!-- To add your art:
-           Replace the .add-art-hint divs with .art-card divs.
-           Inside, put an <img src="../assets/images/your-file.jpg" alt="Description">
-           Then add the .art-card-overlay div and .art-card-info with title and sub. -->
+      <div class="art-grid reveal" data-delay="80">
 
-      <div class="art-grid reveal">
-        <div class="add-art-hint">
-          <span style="font-size:1.5rem; opacity:0.3;">+</span>
-          Add your art here<br>
-          <span style="opacity:0.5; margin-top:4px;">replace with &lt;img&gt; tag</span>
-        </div>
-        <div class="add-art-hint">
-          <span style="font-size:1.5rem; opacity:0.3;">+</span>
-          Add your art here
-        </div>
-        <div class="add-art-hint">
-          <span style="font-size:1.5rem; opacity:0.3;">+</span>
-          Add your art here
-        </div>
-        <div class="add-art-hint">
-          <span style="font-size:1.5rem; opacity:0.3;">+</span>
-          Add your art here
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top:1rem;">
-        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="btn-ghost">
-          See full portfolio on ArtStation ↗
+        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="art-card">
+          <img src="../assets/images/concept1.jpg" alt="Concept art">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">Character Concept</div>
+            <div class="art-card-sub">Illustration · IbisPaint</div>
+          </div>
         </a>
+
+        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="art-card">
+          <img src="../assets/images/concept2.jpg" alt="Concept art 2">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">Character Concept</div>
+            <div class="art-card-sub">Illustration · IbisPaint</div>
+          </div>
+        </a>
+
+        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="art-card">
+          <img src="../assets/images/OoA.jpg" alt="Order of Ashira">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">Order of Ashira</div>
+            <div class="art-card-sub">Lore &amp; Faction Design</div>
+          </div>
+        </a>
+
+        <a href="#" class="art-card">
+          <img src="../assets/images/map2.png" alt="World map">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">Tirnanog &amp; Zanskar</div>
+            <div class="art-card-sub">World Map · The Raven's Descent</div>
+          </div>
+        </a>
+
+        <a href="#" class="art-card">
+          <img src="../assets/images/map.jpg" alt="Hand-drawn map">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">World Map — Sketch</div>
+            <div class="art-card-sub">World-building · Pen &amp; Ink</div>
+          </div>
+        </a>
+
+        <a href="#" class="art-card">
+          <img src="../assets/images/A2.png" alt="Game design document">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">Game Design Document</div>
+            <div class="art-card-sub">Reservoir — Cyberpunk ARPG</div>
+          </div>
+        </a>
+
+        <a href="#" class="art-card">
+          <img src="../assets/images/map3.png" alt="Map sketch 2">
+          <div class="art-card-overlay"></div>
+          <div class="art-card-info">
+            <div class="art-card-title">Northern Dunes &amp; Great Passage</div>
+            <div class="art-card-sub">World-building Sketch</div>
+          </div>
+        </a>
+
+        <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="art-card" style="align-items:center;justify-content:center;text-align:center;">
+          <div style="position:relative;z-index:1;">
+            <div style="font-size:1.8rem;margin-bottom:0.75rem;opacity:0.5;">↗</div>
+            <div class="art-card-title" style="font-size:0.9rem;">More on ArtStation</div>
+            <div class="art-card-sub" style="margin-top:4px;">safiakillspop</div>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- STORY & NARRATIVE -->
-  <section class="section" style="background:var(--bg2); border-top:1px solid var(--border);">
+  <!-- BOOKS -->
+  <section class="section alt-section">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-label">Writing</div>
-        <h2>Story &amp; Book Projects</h2>
+        <h2>Books &amp; Stories</h2>
         <div class="rule"></div>
+        <p style="color:var(--muted);max-width:52ch;font-size:0.92rem;">Two fantasy universes, six novels, two story collections, and two more in the pipeline. All interconnected, all in progress.</p>
       </div>
 
-      <div class="story-grid">
-        <div class="story-card reveal">
-          <div style="font-family:var(--mono);font-size:0.6rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">Project</div>
-          <h3>Add your story project</h3>
-          <p>Describe your book, narrative project, or game world document. What's it about? What's the tone?</p>
-        </div>
-        <div class="story-card reveal" data-delay="80">
-          <div style="font-family:var(--mono);font-size:0.6rem;color:var(--gold-dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">World-building</div>
-          <h3>ARPG Lore &amp; Systems</h3>
-          <p>World-building and narrative documentation for the Path of Exile–inspired ARPG project. Lore, factions, and story beats.</p>
-        </div>
+      <!-- UNIVERSE 1 -->
+      <div class="universe-label reveal">The Raven's Descent Universe</div>
+
+      <div class="book-card reveal" data-delay="40">
+        <div class="book-series">Ruhvana Duology — Book 1</div>
+        <div class="book-title">Assassins of Ariya</div>
+        <div class="book-excerpt">In <em>The Raven's Descent</em>, Layal must prove his innocence while navigating betrayal, magic, and ancient mysteries. Alongside rivals, allies, and a mysterious woman cloaked in black, he confronts forces that could shape his fate and the destiny of Ariya.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Adventure</span><span class="book-tag">Assassins</span></div>
       </div>
+
+      <div class="book-card reveal" data-delay="60">
+        <div class="book-series">Ruhvana Duology — Book 2</div>
+        <div class="book-title">Shadows of Ritavāda</div>
+        <div class="book-excerpt">Secrets unravel and new dangers emerge as the Ruhvana Duology continues. Layal must navigate shadows of betrayal, magic, and destiny to protect Ariya.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Magic</span><span class="book-tag">Adventure</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="80">
+        <div class="book-series">Nordavalea Duology — Book 1</div>
+        <div class="book-title">Saga of a Bastard Prince</div>
+        <div class="book-excerpt">Rieka seeks revenge for his loved ones in a land torn by war and intrigue. Facing cunning enemies, loyal allies, and dark secrets, he must navigate Uhtricforp's dangerous politics — and survive the king's wrath.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Adventure</span><span class="book-tag">Political Intrigue</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="100">
+        <div class="book-series">Nordavalea Duology — Book 2</div>
+        <div class="book-title">Crown of a Bastard Prince</div>
+        <div class="book-excerpt">The saga continues as Rieka confronts court intrigue, rising threats, and the burden of leadership. Will vengeance and power lead him to triumph — or destruction?</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Adventure</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="110">
+        <div class="book-series">Great Passage Duology — Book 1</div>
+        <div class="book-title">The Shadows We Walk</div>
+        <div class="book-excerpt">Intrigue, power struggles, and dark secrets in a richly imagined world where every choice has consequences.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Adventure</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="120">
+        <div class="book-series">Great Passage Duology — Book 2</div>
+        <div class="book-title">Legions of Blood</div>
+        <div class="book-excerpt">War, betrayal, and destiny collide. The fate of kingdoms hangs in the balance.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">War</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="130">
+        <div class="book-series">Ariya Tales Collection</div>
+        <div class="book-title">Tales of Ariya</div>
+        <div class="book-excerpt">Short stories uncovering forgotten heroes, villains, and legends that shaped the world before the main saga.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Short Stories</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="140">
+        <div class="book-series">Ariya Tales Collection</div>
+        <div class="book-title">Out of the North</div>
+        <div class="book-excerpt">Legends from the harsh northern lands, where magic, survival, and ancient cultures collide in tales of courage and mystery.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Short Stories</span><span class="book-tag">North</span></div>
+      </div>
+
+      <!-- UNIVERSE 2 -->
+      <div class="universe-label reveal" style="margin-top:2rem;">Fractured Lands Universe</div>
+
+      <div class="book-card reveal" data-delay="40">
+        <div class="book-series">Veilborn Series</div>
+        <div class="book-title">Veilborn</div>
+        <div class="book-excerpt">After the Veil Cataclysm, survival and memory clash in a corrupted world. Explores the consequences of loss, power, and hidden truths.</div>
+        <div class="book-tags"><span class="book-tag">Fantasy</span><span class="book-tag">Dark</span><span class="book-tag">Veil Cataclysm</span></div>
+      </div>
+
+      <div class="book-card reveal" data-delay="60">
+        <div class="book-series">SYNTHESIS Series</div>
+        <div class="book-title">SYNTHESIS://STRDT</div>
+        <div class="book-excerpt">In a fractured post-cataclysm world, life has retreated underground and the sky bleeds memory. The protagonist must uncover their past while navigating danger and uncovering a larger purpose.</div>
+        <div class="book-tags"><span class="book-tag">Sci-fi</span><span class="book-tag">Post-apocalyptic</span><span class="book-tag">Veil Cataclysm</span></div>
+      </div>
+
     </div>
   </section>
 
   <footer>
     <div class="footer-logo">Safia Nassiri — 2025</div>
     <div class="footer-links">
-      <a href="https://github.com/safianassiri" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/safianassiri" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener">GitHub</a>
       <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
+      <a href="https://bluekillspop.itch.io" target="_blank" rel="noopener">itch.io</a>
     </div>
     <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
   </footer>
-
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
