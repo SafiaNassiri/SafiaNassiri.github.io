@@ -60,246 +60,191 @@
         </h1>
         <div class="rule reveal" data-delay="120"></div>
         <p class="reveal" data-delay="160">
-          Nine games built across Godot, Unity, Love2D, Pygame, and Rust. Jam
-          entries, narrative experiments, dungeon crawlers, and everything in
-          between.
+          16 games and prototypes across Godot, Unity, Love2D, Pygame, and Rust — jam entries, narrative experiments, team projects, and a senior capstone.
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt-section" id="featured">
       <div class="section-inner">
-        <div class="filter-tabs reveal">
-          <button class="filter-tab active" data-filter="all" type="button">All</button>
-          <button class="filter-tab" data-filter="released" type="button">Released</button>
-          <button class="filter-tab" data-filter="jam" type="button">Game Jam</button>
-          <button class="filter-tab" data-filter="prototype" type="button">Prototype</button>
-          <button class="filter-tab" data-filter="indev" type="button">In Dev</button>
+        <div class="section-header reveal">
+          <div class="section-label">Highlights</div>
+          <h2>Featured games</h2>
+          <div class="rule"></div>
+          <p>A jam podium finish, a shipped itch.io release, and a team project I led end to end.</p>
         </div>
+        <div class="featured-row">
+          <article class="project-card feature-card reveal" data-type="jam,godot" style="--h:143">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">SB</span><span class="cover-tech">Godot 4</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Game Jam · 2nd Place</span></div>
+            <h3 class="card-title">The Slippery Bandit</h3>
+            <p class="card-desc">Heist-action stealth game built for the Summer Beta Game Jam, placing 2nd. Features dynamic detection cones, patrol AI, and custom canvas UI nodes.</p>
+            <div class="card-tags"><span class="card-tag">Godot 4</span><span class="card-tag">GDScript</span><span class="card-tag">Game Jam</span><span class="card-tag">Stealth</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/TheSlipperyBandit-SummerBeta" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card feature-card reveal" data-type="jam,godot" style="--h:159">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Li</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span></div>
+            <h3 class="card-title">Limbo</h3>
+            <p class="card-desc">A ragebait puzzle game — you play as a QA tester sucked into the game they're supposed to be testing, solving the puzzles of Zyra, an all-powerful AI overlord with zero empathy. Built in 48 hours for ACM Game Jam Spring 2026 (theme: Not What It Seems).</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Spring 2026</span><span class="card-tag">itch.io</span></div>
+            <div class="card-actions"><a href="https://bluekillspop.itch.io/limbo" target="_blank" rel="noopener">Play on itch.io ↗</a><a href="https://github.com/SafiaNassiri/ACM-GameJamSpring26-Limbo" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card feature-card reveal" data-type="unity" style="--h:168">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Su</span><span class="cover-tech">Unity</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Team Project · Lead</span></div>
+            <h3 class="card-title">Sundered: The Gilded Curse</h3>
+            <p class="card-desc">Led a 5–10 person multidisciplinary team through the full delivery lifecycle as ACM Game Dev Committee Head. Architected the core event systems, modular components, and game state loops.</p>
+            <div class="card-tags"><span class="card-tag">Unity</span><span class="card-tag">C#</span><span class="card-tag">Team Lead</span><span class="card-tag">ACM</span></div>
+            <div class="card-actions"><a href="https://github.com/Rowan-ACM-Game-Dev/Sundered-The_Gilded_Curse" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <div class="cards-grid reveal" data-delay="80">
-          <a
-            href="https://bluekillspop.itch.io/limbo"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="jam,released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Game Jam · Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Limbo</div>
-            <p class="card-desc">
-              A ragebait puzzle game — you play as a QA tester sucked into the
-              game they're supposed to be testing. Solve the puzzles of Zyra, an
-              all-powerful AI overlord with zero empathy. Made for ACM Game Jam
-              Spring 2026, theme: <em>Not What It Seems</em>.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Godot</span
-              ><span class="card-tag">GDScript</span
-              ><span class="card-tag">Spring 2026</span
-              ><span class="card-tag">itch.io</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/EchoesOfTheGrove"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="jam,released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Game Jam · Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Echoes of the Grove</div>
-            <p class="card-desc">
-              A compact Metroidvania about a satyr named Thistle racing through
-              a dying forest where time is collapsing. Explore the last living
-              glade and reach the Hourseed Tree before the final second runs
-              out.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Godot</span
-              ><span class="card-tag">Metroidvania</span
-              ><span class="card-tag">Jam</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/What-Remains-in-Sleep"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="jam,released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Game Jam · Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">What Remains in Sleep</div>
-            <p class="card-desc">
-              A 2D narrative puzzle-horror game. You wake in a strange, looping
-              place with no memory of how you got there. Time is stuck. The
-              walls remember things you don't. Created for BatJam, June 2025.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Godot</span
-              ><span class="card-tag">Horror</span
-              ><span class="card-tag">Narrative</span
-              ><span class="card-tag">BatJam 2025</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/Wolflight"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Wolflight</div>
-            <p class="card-desc">
-              A 2D platformer. You uncover a ruined shrine and a statue frozen
-              mid-sacrifice — her soul has shattered into fourteen runes
-              scattered across the world. Collect them to relive her final
-              memories and piece together the truth of the Forgotten Keeper.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">2D Platformer</span
-              ><span class="card-tag">Narrative</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/ShardsOfAether"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Shards of Aether</div>
-            <p class="card-desc">
-              A command-line adventure game in Rust. Explore interconnected
-              levels, battle enemies, collect relics, and uncover the fate of a
-              fractured world.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Rust</span><span class="card-tag">CLI</span
-              ><span class="card-tag">Adventure</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/TheLastLight-PythonGame"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">The Last Light</div>
-            <p class="card-desc">
-              A 2D exploration and resource collection game in Pygame. The world
-              is shrouded in darkness. You are the last survivor, tasked with
-              restoring the Shrine of Light by gathering scattered orbs across a
-              hostile land.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Python</span
-              ><span class="card-tag">Pygame</span
-              ><span class="card-tag">Exploration</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="jam,prototype"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-game">Game Jam · Prototype</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Flesh of the Forgotten</div>
-            <p class="card-desc">
-              A dark, narrative-driven fantasy game. Your choices shape the
-              destiny of Kael, a survivor entwined with ancient godly power.
-              Built for BatJam 2.0 in two weeks, theme:
-              <em>Symbiotic Relationship</em>.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Narrative</span
-              ><span class="card-tag">BatJam 2.0</span
-              ><span class="card-tag">Choice-based</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/TwilightOfEryndor"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="indev"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-wip">In Dev</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Twilight of Eryndor</div>
-            <p class="card-desc">
-              A 2D roguelike dungeon crawler in Lua/Love2D. Battle through
-              procedurally generated dungeons, face waves of enemies, collect
-              powerful loot, and see how long you can survive.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Lua</span
-              ><span class="card-tag">Love2D</span
-              ><span class="card-tag">Roguelike</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="prototype"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-wip">Prototype</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Cradle of Rust</div>
-            <p class="card-desc">
-              A story-driven survival and choice-based game in Godot. Trapped
-              inside a decaying facility, players scavenge resources and make
-              morally challenging decisions that affect the facility's AI,
-              creating a branching narrative with multiple endings.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Godot</span
-              ><span class="card-tag">GDScript</span
-              ><span class="card-tag">Branching Narrative</span
-              ><span class="card-tag">Senior Project</span>
-            </div>
-          </a>
+    <section class="section" id="all">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-label">Everything</div>
+          <h2>All games (16)</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" data-filter="all" type="button">All (16)</button>
+          <button class="filter-tab" data-filter="jam" type="button">Game Jam (5)</button>
+          <button class="filter-tab" data-filter="godot" type="button">Godot (8)</button>
+          <button class="filter-tab" data-filter="unity" type="button">Unity (3)</button>
+          <button class="filter-tab" data-filter="other" type="button">Other engines (5)</button>
+        </div>
+        <div class="cards-grid">
+          <article class="project-card reveal" data-type="jam,godot" style="--h:143">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">SB</span><span class="cover-tech">Godot 4</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Game Jam · 2nd Place</span></div>
+            <h3 class="card-title">The Slippery Bandit</h3>
+            <p class="card-desc">Heist-action stealth game built for the Summer Beta Game Jam, placing 2nd. Features dynamic detection cones, patrol AI, and custom canvas UI nodes.</p>
+            <div class="card-tags"><span class="card-tag">Godot 4</span><span class="card-tag">GDScript</span><span class="card-tag">Game Jam</span><span class="card-tag">Stealth</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/TheSlipperyBandit-SummerBeta" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="jam,godot" style="--h:159">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Li</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span></div>
+            <h3 class="card-title">Limbo</h3>
+            <p class="card-desc">A ragebait puzzle game — you play as a QA tester sucked into the game they're supposed to be testing, solving the puzzles of Zyra, an all-powerful AI overlord with zero empathy. Built in 48 hours for ACM Game Jam Spring 2026 (theme: Not What It Seems).</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Spring 2026</span><span class="card-tag">itch.io</span></div>
+            <div class="card-actions"><a href="https://bluekillspop.itch.io/limbo" target="_blank" rel="noopener">Play on itch.io ↗</a><a href="https://github.com/SafiaNassiri/ACM-GameJamSpring26-Limbo" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="unity" style="--h:168">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Su</span><span class="cover-tech">Unity</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Team Project · Lead</span></div>
+            <h3 class="card-title">Sundered: The Gilded Curse</h3>
+            <p class="card-desc">Led a 5–10 person multidisciplinary team through the full delivery lifecycle as ACM Game Dev Committee Head. Architected the core event systems, modular components, and game state loops.</p>
+            <div class="card-tags"><span class="card-tag">Unity</span><span class="card-tag">C#</span><span class="card-tag">Team Lead</span><span class="card-tag">ACM</span></div>
+            <div class="card-actions"><a href="https://github.com/Rowan-ACM-Game-Dev/Sundered-The_Gilded_Curse" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="jam,godot" style="--h:144">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Eg</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span></div>
+            <h3 class="card-title">Echoes of the Grove</h3>
+            <p class="card-desc">A compact Metroidvania about a satyr named Thistle racing through a dying forest where time is collapsing. Explore the last living glade and reach the Hourseed Tree before the final second runs out. Features dynamic audio layers and branching dialogue.</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Metroidvania</span><span class="card-tag">Fall 2025</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/ACM-GameJamFall25-EchoesOfTheGrove" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="godot" style="--h:164">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Ax</span><span class="cover-tech">Godot / C#</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Combat Prototype</span></div>
+            <h3 class="card-title">Axe-A-Lot</h3>
+            <p class="card-desc">Modular action combat prototype featuring decoupled finite state machines (FSM), weapon collision boxes, and responsive input buffering.</p>
+            <div class="card-tags"><span class="card-tag">Godot / C#</span><span class="card-tag">State Machines</span><span class="card-tag">Hitboxes</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener">View GitHub ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="godot" style="--h:174">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Cr</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Senior Capstone</span></div>
+            <h3 class="card-title">Cradle of Rust</h3>
+            <p class="card-desc">Senior capstone: a story-driven survival and choice-based game. Trapped inside a decaying facility, players scavenge resources and make morally challenging decisions that shape a branching narrative with multiple endings.</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Branching Narrative</span><span class="card-tag">Capstone</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="other" style="--h:140">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Te</span><span class="cover-tech">Lua / Love2D</span></div>
+            <div class="card-top"><span class="card-badge badge-wip">In Dev</span></div>
+            <h3 class="card-title">Twilight of Eryndor</h3>
+            <p class="card-desc">A 2D roguelike dungeon crawler. Battle through procedurally generated dungeons, face waves of enemies, collect powerful loot, and see how long you can survive. Includes custom camera lerping and retro sprite render passes.</p>
+            <div class="card-tags"><span class="card-tag">Lua</span><span class="card-tag">Love2D</span><span class="card-tag">Roguelike</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/TwilightOfEryndor-LuaGame" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="other" style="--h:141">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">LL</span><span class="cover-tech">Pygame</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Released</span></div>
+            <h3 class="card-title">The Last Light</h3>
+            <p class="card-desc">A 2D exploration and resource-collection game built from scratch in Python. The world is shrouded in darkness; as the last survivor you restore the Shrine of Light by gathering scattered orbs. Features custom 2D collision detection and sprite animation.</p>
+            <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">Pygame</span><span class="card-tag">Collision Logic</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/TheLastLight-PythonGame" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="other" style="--h:191">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Sa</span><span class="cover-tech">Rust</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Released</span></div>
+            <h3 class="card-title">Shards of Aether</h3>
+            <p class="card-desc">A command-line adventure game in Rust. Explore interconnected levels, battle enemies, collect relics, and uncover the fate of a fractured world — built to practice memory-safe concurrency and borrow-checker patterns.</p>
+            <div class="card-tags"><span class="card-tag">Rust</span><span class="card-tag">CLI</span><span class="card-tag">Adventure</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/ShardsOfAether-RustProject" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="jam,godot" style="--h:180">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Ff</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Game Jam · Prototype</span></div>
+            <h3 class="card-title">Flesh of the Forgotten</h3>
+            <p class="card-desc">A dark, narrative-driven fantasy game. Your choices shape the destiny of Kael, a survivor entwined with ancient godly power. Built for BatJam 2.0 in two weeks (theme: Symbiotic Relationship), with enemy attack telegraphs and state persistence.</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">BatJam 2.0</span><span class="card-tag">Choice-based</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="unity" style="--h:145">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Sy</span><span class="cover-tech">Unity</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Metroidvania</span></div>
+            <h3 class="card-title">SYNTHESIS: STRDT</h3>
+            <p class="card-desc">A 2D action-roguelite metroidvania inspired by Death Stranding, Shadow of Mordor, and Hollow Knight. Features custom ShaderLab screen-space post-processing, animation state trees, and combat parry timing.</p>
+            <div class="card-tags"><span class="card-tag">Unity</span><span class="card-tag">ShaderLab</span><span class="card-tag">C#</span><span class="card-tag">Roguelite</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/SYNTHESIS-STRDT" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="jam,godot" style="--h:159">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Wr</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span></div>
+            <h3 class="card-title">What Remains in Sleep</h3>
+            <p class="card-desc">A 2D narrative puzzle-horror game. You wake in a strange, looping place with no memory of how you got there. Time is stuck, and the walls remember things you don't. Created for BatJam, June 2025, with custom lighting shaders and a sanity-gauge system.</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">Horror</span><span class="card-tag">Narrative</span><span class="card-tag">BatJam 2025</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/What-Remains-in-Sleep" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="godot" style="--h:192">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Ve</span><span class="cover-tech">Godot</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Isometric ARPG</span></div>
+            <h3 class="card-title">VERGLAS</h3>
+            <p class="card-desc">Dark fantasy isometric action RPG built with Godot. Features custom isometric coordinate sorting, inventory serialization, and spell-casting controllers.</p>
+            <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Isometric</span><span class="card-tag">ARPG</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/VERGLAS" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="unity" style="--h:142">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">La</span><span class="cover-tech">Unity</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">3D Mystery</span></div>
+            <h3 class="card-title">Lantern-Laurel</h3>
+            <p class="card-desc">Atmospheric 3D mystery adventure developed in Unity, featuring custom C# lighting interaction shaders, inspection mechanics, and environmental triggers.</p>
+            <div class="card-tags"><span class="card-tag">Unity</span><span class="card-tag">C#</span><span class="card-tag">3D</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/Lantern-Laurel" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="other" style="--h:150">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Fa</span><span class="cover-tech">C#</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Simulation</span></div>
+            <h3 class="card-title">Farmicorium</h3>
+            <p class="card-desc">Farming simulation with programmatic entity behaviors, tile-based agricultural systems, and procedural game loops.</p>
+            <div class="card-tags"><span class="card-tag">C#</span><span class="card-tag">Simulation</span><span class="card-tag">Entity Logic</span></div>
+            <div class="card-actions"><a href="https://github.com/studentlaptop/Farmicorium" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="other" style="--h:192">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Bi</span><span class="cover-tech">Lua Mod</span></div>
+            <div class="card-top"><span class="card-badge badge-wip">Mod · In Dev</span></div>
+            <h3 class="card-title">Basim Ibn Ishaq — Binding of Isaac Mod</h3>
+            <p class="card-desc">A mod introducing Basim Ibn Ishaq as a playable character in The Binding of Isaac — agile and deadly, with piercing attacks and a teleport ability inspired by his Assassin's Creed skills.</p>
+            <div class="card-tags"><span class="card-tag">Lua</span><span class="card-tag">Game Mod</span><span class="card-tag">Binding of Isaac</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/BasimIbnIshaq-MOD" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
         </div>
       </div>
     </section>

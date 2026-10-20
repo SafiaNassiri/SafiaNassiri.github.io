@@ -1051,3 +1051,146 @@ footer {
     gap: 1.75rem;
   }
 }
+
+/* ==========================================================================
+   PROJECT / GAME CARDS — covers, actions, featured row
+   ========================================================================== */
+.card-cover {
+  position: relative;
+  height: 96px;
+  margin: -1.75rem -1.75rem 0.35rem;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--h, 160) 38% 17%),
+    hsl(calc(var(--h, 160) + 28) 42% 9%)
+  );
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.card-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.035) 0 1px,
+    transparent 1px 14px
+  );
+}
+.cover-mono {
+  position: absolute;
+  left: 1.75rem;
+  bottom: -0.2rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 3.4rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: hsl(var(--h, 160) 45% 66% / 0.85);
+}
+.cover-tech {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: hsl(var(--h, 160) 30% 72% / 0.75);
+}
+
+.project-card .card-title {
+  font-size: 1.3rem;
+}
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
+  padding-top: 0.25rem;
+}
+.card-actions a {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--mint);
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--t), border-color var(--t);
+}
+.card-actions a:hover {
+  color: var(--cream);
+  border-color: var(--mint);
+}
+.card-tags {
+  margin-top: auto;
+}
+
+/* Featured row */
+.featured-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.feature-card {
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  gap: 1rem;
+}
+.feature-card .card-cover {
+  height: 150px;
+  border-bottom: 1px solid var(--border);
+}
+.feature-card .cover-mono {
+  font-size: 5rem;
+  bottom: -0.45rem;
+}
+.feature-card .card-title {
+  font-size: 1.5rem;
+}
+.feature-card .card-desc {
+  font-size: 1rem;
+}
+.feature-star {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e6cf9a;
+}
+.feature-card .card-actions {
+  gap: 0.6rem;
+  padding-top: 0.5rem;
+}
+.feature-card .card-actions a {
+  font-size: 0.82rem;
+  padding: 9px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border2);
+  color: var(--cream);
+}
+.feature-card .card-actions a:first-child {
+  background: var(--mint);
+  border-color: var(--mint);
+  color: var(--bg);
+}
+.feature-card .card-actions a:first-child:hover {
+  background: var(--cream);
+  border-color: var(--cream);
+}
+.feature-card .card-actions a:not(:first-child):hover {
+  border-color: var(--mint);
+  color: var(--white);
+}
+@media (max-width: 1000px) {
+  .featured-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Section directly following another plain section */
+.section-flush {
+  padding-top: 0;
+}

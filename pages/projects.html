@@ -60,117 +60,142 @@
         </h1>
         <div class="rule reveal" data-delay="120"></div>
         <p class="reveal" data-delay="160">
-          Full-stack applications, mods, and tools — built with MERN, PHP, Java,
-          and whatever the project needs.
+          10 projects spanning full-stack web apps, client sites, operating systems research, and developer tools.
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt-section" id="featured">
       <div class="section-inner">
-        <div class="filter-tabs reveal">
-          <button class="filter-tab active" data-filter="all" type="button">All</button>
-          <button class="filter-tab" data-filter="released" type="button">Released</button>
-          <button class="filter-tab" data-filter="indev" type="button">In Dev</button>
+        <div class="section-header reveal">
+          <div class="section-label">Highlights</div>
+          <h2>Featured projects</h2>
+          <div class="rule"></div>
+          <p>Full-stack, systems, and algorithms work I'm proudest of.</p>
         </div>
+        <div class="featured-row">
+          <article class="project-card feature-card reveal" data-type="web" style="--h:179">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">AR</span><span class="cover-tech">MERN</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Full-stack · MERN</span></div>
+            <h3 class="card-title">ARC — Archive. Record. Connect.</h3>
+            <p class="card-desc">A gaming identity network where players showcase their profile, track favorite games, discover new titles, and connect with a community. Built with a Node.js/Express REST API, RAWG API integration via Axios, JWT authentication, and normalized MongoDB schemas.</p>
+            <div class="card-tags"><span class="card-tag">MongoDB</span><span class="card-tag">Express</span><span class="card-tag">React</span><span class="card-tag">Node.js</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/ARC-WebProgramming" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card feature-card reveal" data-type="systems" style="--h:187">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Tx</span><span class="cover-tech">Rust</span></div>
+            <div class="card-top"><span class="card-badge badge-sys">OS Architecture</span></div>
+            <h3 class="card-title">TxCyOS Frontier</h3>
+            <p class="card-desc">Core operating system research project focusing on kernel interfaces, hardware abstractions, memory models, and systems tooling.</p>
+            <div class="card-tags"><span class="card-tag">Rust</span><span class="card-tag">Operating Systems</span><span class="card-tag">Low-Level</span></div>
+            <div class="card-actions"><a href="https://github.com/txcyos/txcyos-frontier" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card feature-card reveal" data-type="systems" style="--h:154">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Pf</span><span class="cover-tech">Algorithms</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Simulation &amp; AI</span></div>
+            <h3 class="card-title">Pathfinding Visualizer</h3>
+            <p class="card-desc">An interactive sandbox simulation that visually demonstrates advanced pathfinding architectures: hybrid A* search, context steering, and multi-agent obstacle routing.</p>
+            <div class="card-tags"><span class="card-tag">Algorithms</span><span class="card-tag">A*</span><span class="card-tag">Interactive</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/Pathfinding-Visualizer" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <div class="cards-grid reveal" data-delay="80">
-          <a
-            href="https://github.com/SafiaNassiri/ARC-WebProgramming"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-swe">Full-stack · Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">ARC — Archive. Record. Connect.</div>
-            <p class="card-desc">
-              A web application built with the MERN stack for gamers to showcase
-              their gaming identity, track favorite games, discover new titles,
-              and connect with a community.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">MongoDB</span
-              ><span class="card-tag">Express</span
-              ><span class="card-tag">React</span
-              ><span class="card-tag">Node.js</span>
-            </div>
-          </a>
-
-          <a
-            href="https://trello.com/b/eQFvYJ94/swe-experiential-learning-subsite"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="released"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-swe">Full-stack · Released</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">SWE Experiential Learning Subsite</div>
-            <p class="card-desc">
-              A full-stack website integrating with Google's API and a database
-              backend. Features routing, error handling, and dynamic data
-              display. Private repository — Trello board linked.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Google API</span
-              ><span class="card-tag">Full-stack</span
-              ><span class="card-tag">Database</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/BandWebsite"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="indev"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-wip">In Dev</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">With Special Guests — Band Site</div>
-            <p class="card-desc">
-              A band website built to showcase With Special Guests' music,
-              members, and demos. Central hub for streaming links, downloads,
-              updates, and future releases.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">HTML/CSS/JS</span
-              ><span class="card-tag">Web Design</span>
-            </div>
-          </a>
-
-          <a
-            href="https://github.com/SafiaNassiri/BasimIbnIshaq-MOD"
-            target="_blank"
-            rel="noopener"
-            class="project-card"
-            data-type="indev"
-          >
-            <div class="card-top">
-              <span class="card-badge badge-wip">In Dev</span
-              ><span class="card-arrow">↗</span>
-            </div>
-            <div class="card-title">Basim Ibn Ishaq — Binding of Isaac Mod</div>
-            <p class="card-desc">
-              A mod introducing Basim Ibn Ishaq as a playable character in The
-              Binding of Isaac. Agile and deadly — equipped with piercing
-              attacks and a teleport ability inspired by his Assassin's Creed
-              skills.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Lua</span
-              ><span class="card-tag">Game Mod</span
-              ><span class="card-tag">Binding of Isaac</span>
-            </div>
-          </a>
+    <section class="section" id="all">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-label">Everything</div>
+          <h2>All projects (10)</h2>
+          <div class="rule"></div>
+        </div>
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" data-filter="all" type="button">All (10)</button>
+          <button class="filter-tab" data-filter="web" type="button">Web & Full-stack (5)</button>
+          <button class="filter-tab" data-filter="client" type="button">Client Work (2)</button>
+          <button class="filter-tab" data-filter="systems" type="button">Systems & Tools (5)</button>
+        </div>
+        <div class="cards-grid">
+          <article class="project-card reveal" data-type="web" style="--h:179">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">AR</span><span class="cover-tech">MERN</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Full-stack · MERN</span></div>
+            <h3 class="card-title">ARC — Archive. Record. Connect.</h3>
+            <p class="card-desc">A gaming identity network where players showcase their profile, track favorite games, discover new titles, and connect with a community. Built with a Node.js/Express REST API, RAWG API integration via Axios, JWT authentication, and normalized MongoDB schemas.</p>
+            <div class="card-tags"><span class="card-tag">MongoDB</span><span class="card-tag">Express</span><span class="card-tag">React</span><span class="card-tag">Node.js</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/ARC-WebProgramming" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="systems" style="--h:187">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Tx</span><span class="cover-tech">Rust</span></div>
+            <div class="card-top"><span class="card-badge badge-sys">OS Architecture</span></div>
+            <h3 class="card-title">TxCyOS Frontier</h3>
+            <p class="card-desc">Core operating system research project focusing on kernel interfaces, hardware abstractions, memory models, and systems tooling.</p>
+            <div class="card-tags"><span class="card-tag">Rust</span><span class="card-tag">Operating Systems</span><span class="card-tag">Low-Level</span></div>
+            <div class="card-actions"><a href="https://github.com/txcyos/txcyos-frontier" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="systems" style="--h:154">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Pf</span><span class="cover-tech">Algorithms</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Simulation &amp; AI</span></div>
+            <h3 class="card-title">Pathfinding Visualizer</h3>
+            <p class="card-desc">An interactive sandbox simulation that visually demonstrates advanced pathfinding architectures: hybrid A* search, context steering, and multi-agent obstacle routing.</p>
+            <div class="card-tags"><span class="card-tag">Algorithms</span><span class="card-tag">A*</span><span class="card-tag">Interactive</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/Pathfinding-Visualizer" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="web" style="--h:164">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Ex</span><span class="cover-tech">PHP</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Enterprise · Academic</span></div>
+            <h3 class="card-title">SWE Experiential Learning Subsite</h3>
+            <p class="card-desc">Built in an Agile team using PHP 8.4+ and Composer. Engineered relational database schemas, secure student workflows, and Google API integrations. Private repository — project board linked.</p>
+            <div class="card-tags"><span class="card-tag">PHP</span><span class="card-tag">MySQL</span><span class="card-tag">Composer</span><span class="card-tag">Google API</span></div>
+            <div class="card-actions"><a href="https://trello.com/b/eQFvYJ94/swe-experiential-learning-subsite" target="_blank" rel="noopener">Project board ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="web,client" style="--h:162">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Ms</span><span class="cover-tech">JavaScript</span></div>
+            <div class="card-top"><span class="card-badge badge-sys">Client Production</span></div>
+            <h3 class="card-title">Mike Seda Films</h3>
+            <p class="card-desc">Commercial portfolio platform for a professional videographer and photographer. Features dynamic video grid playback, fast CDN delivery, and SEO optimization.</p>
+            <div class="card-tags"><span class="card-tag">JavaScript</span><span class="card-tag">Responsive UI</span><span class="card-tag">SEO</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/mikesedafilms" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="web,client" style="--h:152">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Wg</span><span class="cover-tech">CSS3 / JS</span></div>
+            <div class="card-top"><span class="card-badge badge-sys">Client · Music</span></div>
+            <h3 class="card-title">WithSpecialGuests</h3>
+            <p class="card-desc">Custom web application for a touring musical group, with tour date feeds, audio embeds, integrated merch portals, and mobile-first layouts.</p>
+            <div class="card-tags"><span class="card-tag">CSS3 / JS</span><span class="card-tag">Client Dev</span><span class="card-tag">Music Media</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/WithSpecialGuests" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="systems" style="--h:143">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Tw</span><span class="cover-tech">JavaScript</span></div>
+            <div class="card-top"><span class="card-badge badge-sys">Systems &amp; Security</span></div>
+            <h3 class="card-title">TxCyOS Wallet</h3>
+            <p class="card-desc">Cryptographic wallet utility and secure ledger management system engineered for integration within the TxCyOS ecosystem.</p>
+            <div class="card-tags"><span class="card-tag">JavaScript</span><span class="card-tag">Crypto / Security</span><span class="card-tag">TxCyOS</span></div>
+            <div class="card-actions"><a href="https://github.com/txcyos/Wallet" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="web" style="--h:184">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Wl</span><span class="cover-tech">ASP.NET</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Backend · ASP.NET</span></div>
+            <h3 class="card-title">Wolflight</h3>
+            <p class="card-desc">Backend web service and API framework built with ASP.NET, structuring role-based authorization and relational database querying.</p>
+            <div class="card-tags"><span class="card-tag">ASP.NET</span><span class="card-tag">C#</span><span class="card-tag">Backend Services</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/Wolflight" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="systems" style="--h:168">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Om</span><span class="cover-tech">Python</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Discord Bot</span></div>
+            <h3 class="card-title">OmniTome</h3>
+            <p class="card-desc">A multi-universe Discord bot built in Python to manage world-building, character lore, and project bibles across different server channels.</p>
+            <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">Discord</span><span class="card-tag">Bots</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/OmniTome" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
+<article class="project-card reveal" data-type="systems" style="--h:167">
+            <div class="card-cover" aria-hidden="true"><span class="cover-mono">Pp</span><span class="cover-tech">Python</span></div>
+            <div class="card-top"><span class="card-badge badge-swe">Desktop App</span></div>
+            <h3 class="card-title">Pip — Virtual Desktop Pet</h3>
+            <p class="card-desc">Lightweight desktop companion built in Python and Tkinter with transparent overlay windows, idle state loops, and frame-by-frame pixel rendering.</p>
+            <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">Tkinter</span><span class="card-tag">Desktop Tool</span></div>
+            <div class="card-actions"><a href="https://github.com/SafiaNassiri/Pip" target="_blank" rel="noopener">View code ↗</a></div>
+          </article>
         </div>
       </div>
     </section>
