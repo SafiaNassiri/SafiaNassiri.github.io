@@ -4,18 +4,18 @@ Hi! I'm a senior Computer Science student passionate about software engineering,
 
 ## Features
 
-- **Multi-Page Responsive Design:** Dedicated pages for Software Projects, Game Dev, Design, and Devlogs.
-- **Dark Mode Aesthetic:** Custom CSS variables using a slate/charcoal color palette for a modern, consistent look.
-- **Project Filtering:** JavaScript-based filtering system for the Game Development section (Jam, Prototype, Released).
-- **Dynamic Components:** Vanilla JavaScript used to load reusable footer components.
-- **Contact Integration:** Links to GitHub, LinkedIn, Itch.io, and ArtStation.
+- **Multi-page responsive design:** Home, Projects, Games, Experience, and Resume pages with a mobile menu.
+- **Dark forest-emerald theme:** CSS variables in `assets/css/style.css`, matched to my LinkedIn banner.
+- **Project filtering:** Vanilla JS filters on the home page (Games / Web / Systems) and the Games and Projects pages (Released / Jam / Prototype / In Dev).
+- **Accessible by default:** skip link, keyboard focus styles, `prefers-reduced-motion` support.
+- **Link previews:** Open Graph tags so the site previews nicely when shared on LinkedIn.
 
 ## Tech Stack
 
-- **HTML5:** Semantic markup for structure.
-- **CSS3:** Custom styling with Flexbox, CSS Grid, and CSS Variables (no external CSS frameworks).
-- **JavaScript (ES6):** Used for DOM manipulation, project filtering, and component loading.
-- **Font Awesome:** Iconography.
+- **HTML5** semantic markup
+- **CSS3** with Flexbox, Grid, and CSS variables (no frameworks)
+- **JavaScript (ES6)** for the mobile menu, scroll reveal, and filtering
+- **Fonts:** Inter, Fraunces, DM Mono (Google Fonts)
 
 ## Live Demo
 
@@ -26,21 +26,16 @@ Hi! I'm a senior Computer Science student passionate about software engineering,
 ```text
 /
 ├── assets/
-│   ├── images/          # Profile pictures and project screenshots
-│   └── resume/          # PDF Resume
-├── components/
-│   └── footer.html      # Reusable footer component
+│   ├── css/style.css
+│   ├── js/main.js
+│   ├── images/
+│   └── resume/SafiaNassiri_Resume.pdf
 ├── pages/
-│   ├── design.html      # Concept art and skills
-│   ├── resume.html      # Embedded display of resume with download option
-│   ├── games.html       # Game projects with filtering
-│   └── projects.html    # Software engineering projects
-├── carousels.js
-├── contact.html         # Contact links
-├── games.js
-├── index.html           # Landing page / About Me
-├── projects.js
-├── styles.css           # Global dark theme styles
+│   ├── projects.html
+│   ├── games.html
+│   ├── experience.html
+│   └── resume.html
+├── index.html
 └── README.md
 ```
 
@@ -55,4 +50,4 @@ Feel free to reach out via email or connect with me on my platforms:
 
 ---
 
-Made with 💙 by Safia Nassiri
+Made by Safia Nassiri

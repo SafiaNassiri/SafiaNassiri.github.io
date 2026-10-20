@@ -1,130 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games — Safia Nassiri</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-  <div class="cursor"></div><div class="cursor-ring"></div>
-  <nav>
-    <a href="../index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="games.html">Games</a></li>
-      <li><a href="design.html">Design &amp; Writing</a></li>
-      <li><a href="experience.html">Experience</a></li>
-    </ul>
-    <a href="resume.html" class="nav-resume">Resume ↗</a>
-    <div class="hamburger" role="button" aria-label="Menu"><span></span><span></span><span></span></div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="../index.html">Home</a><a href="projects.html">Projects</a>
-    <a href="games.html">Games</a><a href="design.html">Design &amp; Writing</a>
-    <a href="experience.html">Experience</a><a href="resume.html">Resume ↗</a>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games — Safia Nassiri</title>
+    <meta name="description" content="Games and prototypes by Safia Nassiri, built in Godot, Unity, Love2D, Pygame, and Rust." />
+    <meta name="theme-color" content="#081711" />
+    <meta name="author" content="Safia Nassiri" />
+    <link rel="canonical" href="https://safianassiri.github.io/pages/games.html" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23081711'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%2378b598'%3ESN%3C/text%3E%3C/svg%3E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Safia Nassiri" />
+    <meta property="og:title" content="Games — Safia Nassiri" />
+    <meta property="og:description" content="Games and prototypes by Safia Nassiri, built in Godot, Unity, Love2D, Pygame, and Rust." />
+    <meta property="og:url" content="https://safianassiri.github.io/pages/games.html" />
+    <meta property="og:image" content="https://safianassiri.github.io/assets/images/pfp.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <nav aria-label="Main">
+      <a href="../index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="games.html" class="active" aria-current="page">Games</a></li>
+        <li><a href="experience.html">Experience</a></li>
+      </ul>
+      <a href="resume.html" class="nav-resume">Resume ↗</a>
+      <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-  <section class="page-hero">
-    <div class="page-hero-inner">
-      <div class="section-label reveal">Game Development</div>
-      <h1 class="reveal" style="font-size:clamp(2.2rem,5vw,4rem);" data-delay="80">Games &amp;<br>Prototypes</h1>
-      <div class="rule reveal" data-delay="120"></div>
-      <p class="reveal" style="color:var(--muted);max-width:52ch;font-size:0.95rem;" data-delay="160">
-        Nine games built across Godot, Unity, Love2D, Pygame, and Rust. Jam entries, narrative experiments, dungeon crawlers, and everything in between.
-      </p>
+    <div class="mobile-menu">
+      <a href="../index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="games.html" class="active" aria-current="page">Games</a>
+      <a href="experience.html">Experience</a>
+      <a href="resume.html">Resume ↗</a>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="section-inner">
-      <div class="filter-tabs reveal">
-        <div class="filter-tab active" data-filter="all">All</div>
-        <div class="filter-tab" data-filter="released">Released</div>
-        <div class="filter-tab" data-filter="jam">Game Jam</div>
-        <div class="filter-tab" data-filter="prototype">Prototype</div>
-        <div class="filter-tab" data-filter="indev">In Dev</div>
+    <section class="page-hero" id="main">
+      <div class="page-hero-inner">
+        <div class="section-label reveal">Game Development</div>
+        <h1
+          class="reveal"
+          style="font-size: clamp(2.2rem, 5vw, 4rem)"
+          data-delay="80"
+        >
+          Games &amp;<br />Prototypes
+        </h1>
+        <div class="rule reveal" data-delay="120"></div>
+        <p class="reveal" data-delay="160">
+          Nine games built across Godot, Unity, Love2D, Pygame, and Rust. Jam
+          entries, narrative experiments, dungeon crawlers, and everything in
+          between.
+        </p>
       </div>
+    </section>
 
-      <div class="cards-grid reveal" data-delay="80">
+    <section class="section">
+      <div class="section-inner">
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" data-filter="all" type="button">All</button>
+          <button class="filter-tab" data-filter="released" type="button">Released</button>
+          <button class="filter-tab" data-filter="jam" type="button">Game Jam</button>
+          <button class="filter-tab" data-filter="prototype" type="button">Prototype</button>
+          <button class="filter-tab" data-filter="indev" type="button">In Dev</button>
+        </div>
 
-        <a href="https://bluekillspop.itch.io/limbo" target="_blank" rel="noopener" class="project-card" data-type="jam,released">
-          <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Limbo</div>
-          <p class="card-desc">A ragebait puzzle game — you play as a QA tester sucked into the game they're supposed to be testing. Solve the puzzles of Zyra, an all-powerful AI overlord with zero empathy. Made for ACM Game Jam Spring 2026, theme: <em>Not What It Seems</em>.</p>
-          <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Spring 2026</span><span class="card-tag">itch.io</span></div>
-        </a>
+        <div class="cards-grid reveal" data-delay="80">
+          <a
+            href="https://bluekillspop.itch.io/limbo"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="jam,released"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Game Jam · Released</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Limbo</div>
+            <p class="card-desc">
+              A ragebait puzzle game — you play as a QA tester sucked into the
+              game they're supposed to be testing. Solve the puzzles of Zyra, an
+              all-powerful AI overlord with zero empathy. Made for ACM Game Jam
+              Spring 2026, theme: <em>Not What It Seems</em>.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Spring 2026</span
+              ><span class="card-tag">itch.io</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/EchoesOfTheGrove" target="_blank" rel="noopener" class="project-card" data-type="jam,released">
-          <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Echoes of the Grove</div>
-          <p class="card-desc">A compact Metroidvania about a satyr named Thistle racing through a dying forest where time is collapsing. Explore the last living glade and reach the Hourseed Tree before the final second runs out.</p>
-          <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">Metroidvania</span><span class="card-tag">Jam</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/EchoesOfTheGrove"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="jam,released"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Game Jam · Released</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Echoes of the Grove</div>
+            <p class="card-desc">
+              A compact Metroidvania about a satyr named Thistle racing through
+              a dying forest where time is collapsing. Explore the last living
+              glade and reach the Hourseed Tree before the final second runs
+              out.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">Metroidvania</span
+              ><span class="card-tag">Jam</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/What-Remains-in-Sleep" target="_blank" rel="noopener" class="project-card" data-type="jam,released">
-          <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">What Remains in Sleep</div>
-          <p class="card-desc">A 2D narrative puzzle-horror game. You wake in a strange, looping place with no memory of how you got there. Time is stuck. The walls remember things you don't. Created for BatJam, June 2025.</p>
-          <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">Horror</span><span class="card-tag">Narrative</span><span class="card-tag">BatJam 2025</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/What-Remains-in-Sleep"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="jam,released"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Game Jam · Released</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">What Remains in Sleep</div>
+            <p class="card-desc">
+              A 2D narrative puzzle-horror game. You wake in a strange, looping
+              place with no memory of how you got there. Time is stuck. The
+              walls remember things you don't. Created for BatJam, June 2025.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">Horror</span
+              ><span class="card-tag">Narrative</span
+              ><span class="card-tag">BatJam 2025</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/Wolflight" target="_blank" rel="noopener" class="project-card" data-type="released">
-          <div class="card-top"><span class="card-badge badge-game">Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Wolflight</div>
-          <p class="card-desc">A 2D platformer. You uncover a ruined shrine and a statue frozen mid-sacrifice — her soul has shattered into fourteen runes scattered across the world. Collect them to relive her final memories and piece together the truth of the Forgotten Keeper.</p>
-          <div class="card-tags"><span class="card-tag">2D Platformer</span><span class="card-tag">Narrative</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/Wolflight"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="released"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Released</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Wolflight</div>
+            <p class="card-desc">
+              A 2D platformer. You uncover a ruined shrine and a statue frozen
+              mid-sacrifice — her soul has shattered into fourteen runes
+              scattered across the world. Collect them to relive her final
+              memories and piece together the truth of the Forgotten Keeper.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">2D Platformer</span
+              ><span class="card-tag">Narrative</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/ShardsOfAether" target="_blank" rel="noopener" class="project-card" data-type="released">
-          <div class="card-top"><span class="card-badge badge-game">Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Shards of Aether</div>
-          <p class="card-desc">A command-line adventure game in Rust. Explore interconnected levels, battle enemies, collect relics, and uncover the fate of a fractured world.</p>
-          <div class="card-tags"><span class="card-tag">Rust</span><span class="card-tag">CLI</span><span class="card-tag">Adventure</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/ShardsOfAether"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="released"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Released</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Shards of Aether</div>
+            <p class="card-desc">
+              A command-line adventure game in Rust. Explore interconnected
+              levels, battle enemies, collect relics, and uncover the fate of a
+              fractured world.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Rust</span><span class="card-tag">CLI</span
+              ><span class="card-tag">Adventure</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/TheLastLight-PythonGame" target="_blank" rel="noopener" class="project-card" data-type="released">
-          <div class="card-top"><span class="card-badge badge-game">Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">The Last Light</div>
-          <p class="card-desc">A 2D exploration and resource collection game in Pygame. The world is shrouded in darkness. You are the last survivor, tasked with restoring the Shrine of Light by gathering scattered orbs across a hostile land.</p>
-          <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">Pygame</span><span class="card-tag">Exploration</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/TheLastLight-PythonGame"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="released"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Released</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">The Last Light</div>
+            <p class="card-desc">
+              A 2D exploration and resource collection game in Pygame. The world
+              is shrouded in darkness. You are the last survivor, tasked with
+              restoring the Shrine of Light by gathering scattered orbs across a
+              hostile land.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Python</span
+              ><span class="card-tag">Pygame</span
+              ><span class="card-tag">Exploration</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten" target="_blank" rel="noopener" class="project-card" data-type="jam,prototype">
-          <div class="card-top"><span class="card-badge badge-game">Game Jam · Prototype</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Flesh of the Forgotten</div>
-          <p class="card-desc">A dark, narrative-driven fantasy game. Your choices shape the destiny of Kael, a survivor entwined with ancient godly power. Built for BatJam 2.0 in two weeks, theme: <em>Symbiotic Relationship</em>.</p>
-          <div class="card-tags"><span class="card-tag">Narrative</span><span class="card-tag">BatJam 2.0</span><span class="card-tag">Choice-based</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="jam,prototype"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Game Jam · Prototype</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Flesh of the Forgotten</div>
+            <p class="card-desc">
+              A dark, narrative-driven fantasy game. Your choices shape the
+              destiny of Kael, a survivor entwined with ancient godly power.
+              Built for BatJam 2.0 in two weeks, theme:
+              <em>Symbiotic Relationship</em>.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Narrative</span
+              ><span class="card-tag">BatJam 2.0</span
+              ><span class="card-tag">Choice-based</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/TwilightOfEryndor" target="_blank" rel="noopener" class="project-card" data-type="indev">
-          <div class="card-top"><span class="card-badge badge-wip">In Dev</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Twilight of Eryndor</div>
-          <p class="card-desc">A 2D roguelike dungeon crawler in Lua/Love2D. Battle through procedurally generated dungeons, face waves of enemies, collect powerful loot, and see how long you can survive.</p>
-          <div class="card-tags"><span class="card-tag">Lua</span><span class="card-tag">Love2D</span><span class="card-tag">Roguelike</span></div>
-        </a>
+          <a
+            href="https://github.com/SafiaNassiri/TwilightOfEryndor"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="indev"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-wip">In Dev</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Twilight of Eryndor</div>
+            <p class="card-desc">
+              A 2D roguelike dungeon crawler in Lua/Love2D. Battle through
+              procedurally generated dungeons, face waves of enemies, collect
+              powerful loot, and see how long you can survive.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Lua</span
+              ><span class="card-tag">Love2D</span
+              ><span class="card-tag">Roguelike</span>
+            </div>
+          </a>
 
-        <a href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject" target="_blank" rel="noopener" class="project-card" data-type="prototype">
-          <div class="card-top"><span class="card-badge badge-wip">Prototype</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Cradle of Rust</div>
-          <p class="card-desc">A story-driven survival and choice-based game in Godot. Trapped inside a decaying facility, players scavenge resources and make morally challenging decisions that affect the facility's AI, creating a branching narrative with multiple endings.</p>
-          <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">Branching Narrative</span><span class="card-tag">Senior Project</span></div>
-        </a>
-
+          <a
+            href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject"
+            target="_blank"
+            rel="noopener"
+            class="project-card"
+            data-type="prototype"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-wip">Prototype</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Cradle of Rust</div>
+            <p class="card-desc">
+              A story-driven survival and choice-based game in Godot. Trapped
+              inside a decaying facility, players scavenge resources and make
+              morally challenging decisions that affect the facility's AI,
+              creating a branching narrative with multiple endings.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Branching Narrative</span
+              ><span class="card-tag">Senior Project</span>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-logo">Safia Nassiri — 2025</div>
-    <div class="footer-links">
-      <a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://bluekillspop.itch.io" target="_blank" rel="noopener">itch.io</a>
-      <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
-    </div>
-    <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
-  </footer>
-  <script src="../assets/js/main.js"></script>
-</body>
+    <footer>
+      <div class="footer-logo">Safia Nassiri — 2026</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/safia-nassiri/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://bluekillspop.itch.io" target="_blank" rel="noopener">itch.io</a>
+      </div>
+      <div class="footer-copy">Built with HTML, CSS &amp; JavaScript</div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>

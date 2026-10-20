@@ -1,72 +1,77 @@
-// CURSOR
-const cursor = document.querySelector('.cursor');
-const ring   = document.querySelector('.cursor-ring');
-if (cursor && ring && window.matchMedia('(pointer: fine)').matches) {
-  let mx=0,my=0,rx=0,ry=0,started=false;
-  document.addEventListener('mousemove', e => {
-    mx=e.clientX; my=e.clientY;
-    if (!started) {
-      started = true;
-      cursor.style.opacity = '1';
-      ring.style.opacity   = '1';
-    }
-  });
-  const tick = () => {
-    cursor.style.left=mx+'px'; cursor.style.top=my+'px';
-    rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12;
-    ring.style.left=rx+'px'; ring.style.top=ry+'px';
-    requestAnimationFrame(tick);
-  };
-  tick();
-  document.querySelectorAll('a,button,.project-card,.filter-tab,.book-card,.art-card').forEach(el => {
-    el.addEventListener('mouseenter', () => { ring.style.width='44px'; ring.style.height='44px'; });
-    el.addEventListener('mouseleave', () => { ring.style.width='28px'; ring.style.height='28px'; });
-  });
-}
+document.addEventListener("DOMContentLoaded", () => {
+  /* ---------- Mobile menu ---------- */
+  const burger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".mobile-menu");
+  if (burger && menu) {
+    const setOpen = (open) => {
+      menu.classList.toggle("open", open);
+      burger.classList.toggle("open", open);
+      burger.setAttribute("aria-expanded", String(open));
+    };
+    burger.addEventListener("click", () =>
+      setOpen(!menu.classList.contains("open")),
+    );
+    menu.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => setOpen(false)),
+    );
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) setOpen(false);
+    });
+  }
 
-// SCROLL REVEAL
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), +(e.target.dataset.delay||0));
-      obs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach((el,i) => {
-  if (!el.dataset.delay) el.dataset.delay = (i % 5) * 70;
-  obs.observe(el);
-});
+  /* ---------- Scroll reveal ---------- */
+  const revealEls = document.querySelectorAll(".reveal");
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
-// NAV ACTIVE
-const page = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
-  if (a.getAttribute('href').split('/').pop() === page) a.classList.add('active');
-});
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+    );
+    revealEls.forEach((el) => {
+      const delay = el.dataset.delay;
+      if (delay) el.style.transitionDelay = `${delay}ms`;
+      el.classList.add("reveal-init");
+      io.observe(el);
+    });
+  }
+  // If IntersectionObserver is unavailable (or reduced motion), content
+  // simply stays visible — nothing is ever hidden without JS support.
 
-// MOBILE MENU
-const ham  = document.querySelector('.hamburger');
-const menu = document.querySelector('.mobile-menu');
-if (ham && menu) {
-  ham.addEventListener('click', () => {
-    const open = menu.style.display === 'flex';
-    menu.style.display = open ? 'none' : 'flex';
-    const spans = ham.querySelectorAll('span');
-    spans[0].style.transform = open ? '' : 'rotate(45deg) translate(4px,4px)';
-    spans[1].style.opacity   = open ? '' : '0';
-    spans[2].style.transform = open ? '' : 'rotate(-45deg) translate(4px,-4px)';
-  });
-}
+  /* ---------- Project / game filters ---------- */
+  document.querySelectorAll(".filter-tabs").forEach((tabs) => {
+    const scope = tabs.closest(".section-inner") || document;
+    const cards = scope.querySelectorAll(".project-card");
+    const buttons = tabs.querySelectorAll(".filter-tab");
 
-// FILTER TABS
-document.querySelectorAll('.filter-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    tab.closest('.filter-tabs').querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    const filter = tab.dataset.filter;
-    document.querySelectorAll('.project-card[data-type]').forEach(card => {
-      const types = card.dataset.type.split(',');
-      card.style.display = (filter==='all' || types.includes(filter)) ? '' : 'none';
+    const tagsOf = (card) =>
+      (card.dataset.category || card.dataset.type || "")
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.dataset.filter;
+        cards.forEach((card) => {
+          const show = filter === "all" || tagsOf(card).includes(filter);
+          card.classList.toggle("hidden", !show);
+        });
+      });
     });
   });
 });

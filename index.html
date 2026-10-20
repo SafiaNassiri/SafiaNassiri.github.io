@@ -1,154 +1,899 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Safia Nassiri — Software Engineer & Game Developer</title>
-  <meta name="description" content="Senior CS student at Rowan University. Software engineer, game developer, and narrative designer.">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .featured-grid {
-      display: grid; grid-template-columns: repeat(3,1fr);
-      gap: 1.5px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
-    }
-    @media (max-width:900px) { .featured-grid { grid-template-columns:1fr; } }
-    .about-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    @media (max-width:768px) { .about-teaser { grid-template-columns:1fr; gap:2rem; } }
-    .about-quote {
-      font-size: clamp(1.2rem,2.2vw,1.6rem); font-style: italic;
-      color: var(--text); line-height: 1.55;
-      border-left: 2px solid var(--moss-dim); padding-left: 1.5rem;
-    }
-    .about-row { display:flex; align-items:center; gap:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius); }
-    .about-row-icon { font-size:1.4rem; flex-shrink:0; }
-    .about-row-cat { font-family:var(--mono); font-size:0.62rem; color:var(--bark-dim); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:2px; }
-    .about-row-desc { font-size:0.88rem; color:var(--muted); }
-  </style>
-</head>
-<body>
-  <div class="cursor"></div>
-  <div class="cursor-ring"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safia Nassiri — Software Engineer &amp; Gameplay Developer</title>
+    <meta
+      name="description"
+      content="Safia Nassiri — Software engineer and gameplay developer. M.S./B.S. Computer Science at Rowan University. Game systems, full-stack web apps, and operating systems."
+    />
+    <meta name="theme-color" content="#081711" />
+    <meta name="author" content="Safia Nassiri" />
+    <link rel="canonical" href="https://safianassiri.github.io/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23081711'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%2378b598'%3ESN%3C/text%3E%3C/svg%3E"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Safia Nassiri" />
+    <meta
+      property="og:title"
+      content="Safia Nassiri — Software Engineer &amp; Gameplay Developer"
+    />
+    <meta
+      property="og:description"
+      content="Safia Nassiri — Software engineer and gameplay developer. M.S./B.S. Computer Science at Rowan University. Game systems, full-stack web apps, and operating systems."
+    />
+    <meta property="og:url" content="https://safianassiri.github.io/" />
+    <meta
+      property="og:image"
+      content="https://safianassiri.github.io/assets/images/pfp.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <nav aria-label="Main">
+      <a href="index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="active" aria-current="page">Home</a>
+        </li>
+        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a href="pages/games.html">Games</a></li>
+        <li><a href="pages/experience.html">Experience</a></li>
+      </ul>
+      <a href="pages/resume.html" class="nav-resume">Resume ↗</a>
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-  <nav>
-    <a href="index.html" class="nav-logo">Safia Nassiri<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="pages/projects.html">Projects</a></li>
-      <li><a href="pages/games.html">Games</a></li>
-      <li><a href="pages/design.html">Design &amp; Writing</a></li>
-      <li><a href="pages/experience.html">Experience</a></li>
-    </ul>
-    <a href="pages/resume.html" class="nav-resume">Resume ↗</a>
-    <div class="hamburger" role="button" aria-label="Menu"><span></span><span></span><span></span></div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="pages/projects.html">Projects</a>
-    <a href="pages/games.html">Games</a>
-    <a href="pages/design.html">Design &amp; Writing</a>
-    <a href="pages/experience.html">Experience</a>
-    <a href="pages/resume.html">Resume ↗</a>
-  </div>
-
-  <section class="hero-section">
-    <div class="hero-bg"></div>
-    <div class="hero-grid-line"></div>
-    <div class="hero-pfp-wrap">
-      <img src="assets/images/pfp.jpg" alt="Safia Nassiri" class="hero-pfp">
-      <div class="hero-pfp-frame"></div>
+    <div class="mobile-menu">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/games.html">Games</a>
+      <a href="pages/experience.html">Experience</a>
+      <a href="pages/resume.html">Resume ↗</a>
     </div>
 
-    <div class="hero-eyebrow">Senior CS Student · Rowan University · Glassboro NJ</div>
-    <h1 class="hero-h1">Software engineer<br><em>&amp; world builder.</em></h1>
-    <p class="hero-desc">Building full-stack applications, crafting immersive game worlds, and writing the stories that live inside them.</p>
-    <div class="hero-actions">
-      <a href="pages/games.html" class="btn-primary">See my games</a>
-      <a href="pages/projects.html" class="btn-ghost">Software projects</a>
-      <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener" class="btn-ghost">ArtStation ↗</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item"><span class="stat-num">9</span><span class="stat-label">Games built</span></div>
-      <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">Books in progress</span></div>
-      <div class="stat-item"><span class="stat-num">ACM</span><span class="stat-label">GameDev Committee Head</span></div>
-    </div>
-    <div class="hero-scroll-hint">scroll</div>
-  </section>
-
-  <div class="skills-strip">
-    <span class="skill-pill">GDScript</span><span class="skill-pill">Godot</span>
-    <span class="skill-pill">C#</span><span class="skill-pill">Unity</span>
-    <span class="skill-pill">Lua / Love2D</span><span class="skill-pill">Rust</span>
-    <span class="skill-pill">Python</span><span class="skill-pill">SQL</span>
-    <span class="skill-pill">PHP</span><span class="skill-pill">MERN</span>
-    <span class="skill-pill">Java</span><span class="skill-pill">Git</span>
-  </div>
-
-  <!-- FEATURED WORK -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <div class="section-label">Selected work</div>
-        <h2>What I've been building</h2>
-        <div class="rule"></div>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="main">
+      <div class="hero-bg"></div>
+      <div class="hero-grid-line"></div>
+      <div class="hero-pfp-wrap">
+        <img src="assets/images/pfp.jpg" alt="Safia Nassiri" class="hero-pfp" />
+        <div class="hero-pfp-frame"></div>
       </div>
-      <div class="featured-grid">
-        <a href="pages/games.html" class="project-card reveal" data-delay="0">
-          <div class="card-top"><span class="card-badge badge-game">Game Jam · Released</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">Limbo</div>
-          <p class="card-desc">A ragebait puzzle game where you play as a QA tester sucked into the game they're testing. Made for ACM Game Jam Spring 2026.</p>
-          <div class="card-tags"><span class="card-tag">Godot</span><span class="card-tag">GDScript</span><span class="card-tag">itch.io</span></div>
-        </a>
-        <a href="pages/projects.html" class="project-card reveal" data-delay="80">
-          <div class="card-top"><span class="card-badge badge-swe">Full-stack</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">ARC</div>
-          <p class="card-desc">Archive. Record. Connect. — a MERN stack web app for gamers to showcase their identity, track favorites, and discover new titles.</p>
-          <div class="card-tags"><span class="card-tag">MERN</span><span class="card-tag">MongoDB</span><span class="card-tag">React</span></div>
-        </a>
-        <a href="pages/design.html" class="project-card reveal" data-delay="160">
-          <div class="card-top"><span class="card-badge badge-art">World-building</span><span class="card-arrow">↗</span></div>
-          <div class="card-title">The Raven's Descent</div>
-          <p class="card-desc">A 6-book fantasy universe spanning two duologies, a standalone, and a short story collection. Maps, factions, lore, and counting.</p>
-          <div class="card-tags"><span class="card-tag">Fantasy</span><span class="card-tag">6 books</span><span class="card-tag">2 universes</span></div>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section alt-section">
-    <div class="section-inner">
-      <div class="about-teaser">
-        <div class="reveal">
-          <div class="section-label">About me</div>
-          <h2>Code meets craft</h2>
-          <div class="rule"></div>
-          <p style="color:var(--muted);margin-bottom:1.5rem;font-size:0.95rem;">I'm a senior Computer Science student at Rowan University with a passion for building things that feel alive — whether that's a responsive web app, a game with a branching narrative, or a fantasy world with centuries of history behind it.</p>
-          <p style="color:var(--muted);margin-bottom:2rem;font-size:0.95rem;">Outside of class I head the ACM Game Dev Committee and work as Assistant Tech Lead at the TechLounge &amp; MakerSpace, keeping me mentoring, shipping, and always learning.</p>
-          <a href="pages/experience.html" class="btn-ghost">Full experience →</a>
+      <div class="hero-eyebrow">
+        MS / BS Computer Science · Rowan University · Glassboro, NJ
+      </div>
+      <h1 class="hero-h1">
+        Software engineer<br /><em>&amp; gameplay developer.</em>
+      </h1>
+      <p class="hero-desc">
+        Building modular game systems, autonomous simulations, production client
+        web applications, and low-level OS architectures.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a
+          href="https://github.com/SafiaNassiri"
+          target="_blank"
+          rel="noopener"
+          class="btn-ghost"
+          >GitHub ↗</a
+        >
+        <a
+          href="https://www.linkedin.com/in/safia-nassiri/"
+          target="_blank"
+          rel="noopener"
+          class="btn-ghost"
+          >LinkedIn ↗</a
+        >
+        <a
+          href="https://bluekillspop.itch.io"
+          target="_blank"
+          rel="noopener"
+          class="btn-ghost"
+          >itch.io ↗</a
+        >
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">24+</span
+          ><span class="stat-label">Projects &amp; Systems</span>
         </div>
-        <div class="reveal" data-delay="120">
-          <blockquote class="about-quote">"I enjoy crafting immersive worlds and engaging narratives as much as I enjoy coding."</blockquote>
-          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem;">
-            <div class="about-row"><span class="about-row-icon">🎮</span><div><div class="about-row-cat">Game Dev</div><div class="about-row-desc">9 games — Godot, Unity, Love2D, Pygame, Rust</div></div></div>
-            <div class="about-row"><span class="about-row-icon">💻</span><div><div class="about-row-cat">Software Eng.</div><div class="about-row-desc">Full-stack, MERN, SQL, PHP, Java, Spring Boot</div></div></div>
-            <div class="about-row"><span class="about-row-icon">📖</span><div><div class="about-row-cat">Writing &amp; World-building</div><div class="about-row-desc">10+ novels in progress across 2 universes</div></div></div>
-            <div class="about-row"><span class="about-row-icon">🎨</span><div><div class="about-row-cat">Illustration</div><div class="about-row-desc">Gothic-western concept art on ArtStation</div></div></div>
+        <div class="stat-item">
+          <span class="stat-num">2nd Place</span
+          ><span class="stat-label">Summer Beta Game Jam</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Assistant Tech Lead</span
+          ><span class="stat-label">TechLounge &amp; MakerSpace</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS STRIP -->
+    <div class="skills-strip">
+      <span class="skill-pill">C# &amp; Unity</span>
+      <span class="skill-pill">Godot / GDScript</span>
+      <span class="skill-pill">C / C++</span>
+      <span class="skill-pill">Rust</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">PHP 8.4+</span>
+      <span class="skill-pill">React &amp; MERN</span>
+      <span class="skill-pill">SQL &amp; MongoDB</span>
+      <span class="skill-pill">ASP.NET</span>
+      <span class="skill-pill">Lua</span>
+      <span class="skill-pill">Java</span>
+      <span class="skill-pill">Git / Docker</span>
+    </div>
+
+    <!-- COMPLETE PROJECT REPOSITORY -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-label">Complete Project Index</div>
+          <h2>Engineering, Gameplay &amp; Systems</h2>
+          <div class="rule"></div>
+        </div>
+
+        <!-- FILTER CONTROLS -->
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" data-filter="all">All (24)</button>
+          <button class="filter-tab" data-filter="game">
+            Games &amp; Engine Tools
+          </button>
+          <button class="filter-tab" data-filter="web">
+            Web &amp; Applications
+          </button>
+          <button class="filter-tab" data-filter="system">
+            Systems &amp; OS
+          </button>
+        </div>
+
+        <div class="featured-grid">
+          <!-- 1. TxCyOS Frontier -->
+          <a
+            href="https://github.com/txcyos/txcyos-frontier"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="system"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-sys">OS Architecture</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">TxCyOS Frontier</div>
+            <p class="card-desc">
+              Core operating system research project focusing on kernel
+              interfaces, hardware abstractions, memory models, and systems
+              tooling.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Rust</span
+              ><span class="card-tag">Operating Systems</span
+              ><span class="card-tag">Low-Level</span>
+            </div>
+          </a>
+
+          <!-- 2. TxCyOS Wallet -->
+          <a
+            href="https://github.com/txcyos/Wallet"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="system"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-sys">Systems &amp; Security</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">TxCyOS Wallet</div>
+            <p class="card-desc">
+              Cryptographic wallet utility and secure ledger management system
+              engineered for integration within the TxCyOS ecosystem.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">JavaScript</span
+              ><span class="card-tag">Crypto / Security</span
+              ><span class="card-tag">TxCyOS</span>
+            </div>
+          </a>
+
+          <!-- 3. Pathfinding Visualizer -->
+          <a
+            href="https://github.com/SafiaNassiri/Pathfinding-Visualizer"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Simulation &amp; AI</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Pathfinding Visualizer</div>
+            <p class="card-desc">
+              Interactive sandbox simulation visually demonstrating algorithmic
+              pathfinding, hybrid A* search, context steering, and multi-agent
+              obstacle routing.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Algorithms</span
+              ><span class="card-tag">A*</span
+              ><span class="card-tag">Interactive</span>
+            </div>
+          </a>
+
+          <!-- 4. The Slippery Bandit (Summer Beta) -->
+          <a
+            href="https://github.com/SafiaNassiri/TheSlipperyBandit-SummerBeta"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Award Winner · 2nd Place</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">The Slippery Bandit</div>
+            <p class="card-desc">
+              Heist-action stealth game built for the Summer Beta Game Jam.
+              Engineered dynamic detection cones, patrol AI, and custom canvas
+              UI nodes.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot 4</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Game Jam</span>
+            </div>
+          </a>
+
+          <!-- 5. Axe-A-Lot (Lead Architecture Prototype) -->
+          <a
+            href="https://github.com/SafiaNassiri"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Combat Prototype</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Axe-A-Lot</div>
+            <p class="card-desc">
+              Modular action combat prototype featuring decoupled finite state
+              machines (FSM), weapon collision boxes, and responsive input
+              buffering.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot / C#</span
+              ><span class="card-tag">State Machines</span
+              ><span class="card-tag">Hitboxes</span>
+            </div>
+          </a>
+
+          <!-- 6. Sundered: The Gilded Curse -->
+          <a
+            href="https://github.com/Rowan-ACM-Game-Dev/Sundered-The_Gilded_Curse"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">ACM Project Lead</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Sundered: The Gilded Curse</div>
+            <p class="card-desc">
+              Led a 5–10 person multidisciplinary team through the full delivery
+              lifecycle; architected core event systems, modular components, and
+              game state loops.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Unity</span><span class="card-tag">C#</span
+              ><span class="card-tag">Team Lead</span>
+            </div>
+          </a>
+
+          <!-- 7. Freelance: mikesedafilms -->
+          <a
+            href="https://github.com/SafiaNassiri/mikesedafilms"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Client Production</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Mike Seda Films Portfolio</div>
+            <p class="card-desc">
+              Commercial portfolio web platform for a professional
+              videographer/photographer. Features dynamic video grid playback,
+              fast CDN delivery, and SEO optimization.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">JavaScript</span
+              ><span class="card-tag">Responsive UI</span
+              ><span class="card-tag">SEO</span>
+            </div>
+          </a>
+
+          <!-- 8. Freelance: WithSpecialGuests -->
+          <a
+            href="https://github.com/SafiaNassiri/WithSpecialGuests"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Band &amp; Music Platform</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">WithSpecialGuests</div>
+            <p class="card-desc">
+              Custom web application designed for a touring musical group;
+              provides tour date feeds, audio embeds, integrated merch portals,
+              and mobile-first layouts.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">CSS3 / JS</span
+              ><span class="card-tag">Client Dev</span
+              ><span class="card-tag">Music Media</span>
+            </div>
+          </a>
+
+          <!-- 9. SWE Experiential Learning Subsite -->
+          <a
+            href="https://github.com/SafiaNassiri/SWE-ExperientialLearningSubsite"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Enterprise Academic Web</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Experiential Learning Subsite</div>
+            <p class="card-desc">
+              Built in an Agile team using PHP 8.4+ and Composer. Engineered
+              relational database schemas, secure student workflows, and
+              external Google API integrations.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">PHP</span
+              ><span class="card-tag">MySQL</span
+              ><span class="card-tag">Composer</span>
+            </div>
+          </a>
+
+          <!-- 10. ARC (Archive. Record. Connect.) -->
+          <a
+            href="https://github.com/SafiaNassiri/ARC-WebProgramming"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Full-Stack MERN</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">A.R.C. Web Platform</div>
+            <p class="card-desc">
+              Gaming identity network with a Node.js/Express REST API layer,
+              RAWG API integrations via Axios, JWT token authentication, and
+              normalized MongoDB schemas.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">React</span
+              ><span class="card-tag">Node.js</span
+              ><span class="card-tag">MongoDB</span>
+            </div>
+          </a>
+
+          <!-- 11. Farmicorium -->
+          <a
+            href="https://github.com/studentlaptop/Farmicorium"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Simulation Game</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Farmicorium</div>
+            <p class="card-desc">
+              Farming simulation with programmatic entity behaviors, tile-based
+              agricultural systems, and procedural game loops.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">C#</span
+              ><span class="card-tag">Simulation</span
+              ><span class="card-tag">Entity Logic</span>
+            </div>
+          </a>
+
+          <!-- 12. Lantern-Laurel -->
+          <a
+            href="https://github.com/SafiaNassiri/Lantern-Laurel"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">3D Mystery</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Lantern-Laurel</div>
+            <p class="card-desc">
+              Atmospheric 3D mystery adventure developed in Unity featuring
+              custom C# lighting interaction shaders, inspection mechanics, and
+              environmental triggers.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Unity</span><span class="card-tag">C#</span
+              ><span class="card-tag">3D Indie</span>
+            </div>
+          </a>
+
+          <!-- 13. Limbo (ACM Game Jam Spring 2026) -->
+          <a
+            href="https://github.com/SafiaNassiri/ACM-GameJamSpring26-Limbo"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Released · itch.io</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Limbo</div>
+            <p class="card-desc">
+              Meta-puzzle game where players step into the role of a QA tester
+              trapped inside the glitched project they are testing. Built in 48
+              hours for ACM Game Jam.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Game Jam</span>
+            </div>
+          </a>
+
+          <!-- 14. Echoes of the Grove (ACM Fall 2025) -->
+          <a
+            href="https://github.com/SafiaNassiri/ACM-GameJamFall25-EchoesOfTheGrove"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Game Jam</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Echoes of the Grove</div>
+            <p class="card-desc">
+              Atmospheric narrative game featuring dynamic audio layers,
+              branching dialogue choices, and environmental tile traversal.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Audio Integration</span>
+            </div>
+          </a>
+
+          <!-- 15. The Last Light -->
+          <a
+            href="https://github.com/SafiaNassiri/TheLastLight-PythonGame"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Engine Mechanics</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">The Last Light</div>
+            <p class="card-desc">
+              2D survival title implemented from scratch in Python; features
+              custom 2D collision detection, frame rate throttling, and sprite
+              animations.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Python</span
+              ><span class="card-tag">Pygame</span
+              ><span class="card-tag">Collision Logic</span>
+            </div>
+          </a>
+
+          <!-- 16. SYNTHESIS-STRDT -->
+          <a
+            href="https://github.com/SafiaNassiri/SYNTHESIS-STRDT"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">ShaderLab Metroidvania</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">SYNTHESIS: STRDT</div>
+            <p class="card-desc">
+              2D action-roguelite metroidvania featuring custom ShaderLab
+              screen-space post-processing, animation state trees, and combat
+              parry timing.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">ShaderLab</span
+              ><span class="card-tag">Metroidvania</span
+              ><span class="card-tag">C#</span>
+            </div>
+          </a>
+
+          <!-- 17. VERGLAS -->
+          <a
+            href="https://github.com/SafiaNassiri/VERGLAS"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Isometric ARPG</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">VERGLAS</div>
+            <p class="card-desc">
+              Dark fantasy isometric action RPG built with Godot; engineered
+              custom isometric coordinate sorting, inventory serialization, and
+              spell casting controllers.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">GDScript</span
+              ><span class="card-tag">Isometric</span
+              ><span class="card-tag">ARPG</span>
+            </div>
+          </a>
+
+          <!-- 18. Shards of Aether -->
+          <a
+            href="https://github.com/SafiaNassiri/ShardsOfAether-RustProject"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="system"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-sys">Memory &amp; Systems</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Shards of Aether</div>
+            <p class="card-desc">
+              Systems-level game logic architecture implemented in Rust to test
+              memory-safe concurrency, borrow checker patterns, and fast binary
+              state updates.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Rust</span
+              ><span class="card-tag">Concurrency</span
+              ><span class="card-tag">Memory Safety</span>
+            </div>
+          </a>
+
+          <!-- 19. Wolflight -->
+          <a
+            href="https://github.com/SafiaNassiri/Wolflight"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Enterprise Backend</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Wolflight</div>
+            <p class="card-desc">
+              Backend web service and API framework designed with ASP.NET,
+              structuring role-based authorization and relational database
+              querying.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">ASP.NET</span
+              ><span class="card-tag">C#</span
+              ><span class="card-tag">Backend Services</span>
+            </div>
+          </a>
+
+          <!-- 20. Cradle of Rust (Senior Project) -->
+          <a
+            href="https://github.com/SafiaNassiri/CradleOfRust_SeniorProject"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Capstone Project</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Cradle of Rust</div>
+            <p class="card-desc">
+              Senior computer science capstone release. Employs modular game
+              architectures, environmental persistence, and dynamic player
+              character controllers.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Senior Capstone</span>
+            </div>
+          </a>
+
+          <!-- 21. Twilight of Eryndor -->
+          <a
+            href="https://github.com/SafiaNassiri/TwilightOfEryndor-LuaGame"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Lua Engine Systems</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Twilight of Eryndor</div>
+            <p class="card-desc">
+              2D game framework utilizing Lua and Love2D; structured custom
+              camera lerping routines, sound effect matrices, and retro sprite
+              render passes.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Lua</span
+              ><span class="card-tag">Love2D</span
+              ><span class="card-tag">Engine Loops</span>
+            </div>
+          </a>
+
+          <!-- 22. Flesh of the Forgotten -->
+          <a
+            href="https://github.com/SafiaNassiri/Flesh-of-the-Forgotten"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Dark Fantasy Systems</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Flesh of the Forgotten</div>
+            <p class="card-desc">
+              Action project demonstrating real-time resource exhaustion
+              mechanics, enemy attack telegraphs, and state persistence.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">AI States</span>
+            </div>
+          </a>
+
+          <!-- 23. What Remains in Sleep -->
+          <a
+            href="https://github.com/SafiaNassiri/What-Remains-in-Sleep"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="game"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-game">Atmospheric Narrative</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">What Remains in Sleep</div>
+            <p class="card-desc">
+              Experimental narrative project featuring custom lighting shaders,
+              sanity gauge algorithms, and environmental sound attenuation.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Godot</span
+              ><span class="card-tag">GDScript</span
+              ><span class="card-tag">Atmosphere</span>
+            </div>
+          </a>
+
+          <!-- 24. Pip: Virtual Desktop Companion -->
+          <a
+            href="https://github.com/SafiaNassiri/Pip"
+            target="_blank"
+            rel="noopener"
+            class="project-card reveal"
+            data-category="web"
+          >
+            <div class="card-top">
+              <span class="card-badge badge-swe">Desktop App</span
+              ><span class="card-arrow">↗</span>
+            </div>
+            <div class="card-title">Pip (Virtual Desktop Pet)</div>
+            <p class="card-desc">
+              Lightweight desktop assistant companion engineered in Python and
+              Tkinter with transparent overlay windows, idle state loops, and
+              frame-by-frame pixel rendering.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Python</span
+              ><span class="card-tag">Tkinter</span
+              ><span class="card-tag">Desktop Tool</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & LEADERSHIP -->
+    <section class="section alt-section" id="about">
+      <div class="section-inner">
+        <div class="about-teaser">
+          <div class="reveal">
+            <div class="section-label">About me</div>
+            <h2>Architecture meets execution</h2>
+            <div class="rule"></div>
+            <p>
+              I am a graduate Computer Science student at Rowan University (BS
+              completed, MS in progress) focusing on core gameplay architecture,
+              systems programming, and full-stack web platforms.
+            </p>
+            <p>
+              As Assistant Tech Lead at the Rowan University TechLounge &amp;
+              MakerSpace and former head of the ACM Game Development Committee,
+              I lead cross-disciplinary teams, calibrate digital fabrication
+              hardware, and teach systems logic.
+            </p>
+            <a href="pages/experience.html" class="btn-ghost"
+              >View Full Experience →</a
+            >
+          </div>
+          <div class="reveal">
+            <blockquote class="about-quote">
+              “I engineer modular, decoupled software architectures that scale
+              cleanly across platforms and game sessions.”
+            </blockquote>
+            <div class="about-rows">
+              <div class="about-row">
+                <span class="about-row-icon">01</span>
+                <div>
+                  <div class="about-row-cat">Gameplay Architecture</div>
+                  <div class="about-row-desc">
+                    Decoupled event buses, save/load serialization, custom FSMs,
+                    Godot &amp; Unity
+                  </div>
+                </div>
+              </div>
+              <div class="about-row">
+                <span class="about-row-icon">02</span>
+                <div>
+                  <div class="about-row-cat">Web &amp; Client Solutions</div>
+                  <div class="about-row-desc">
+                    Responsive production sites for creative clients, MERN
+                    stack, PHP 8.4+, REST APIs
+                  </div>
+                </div>
+              </div>
+              <div class="about-row">
+                <span class="about-row-icon">03</span>
+                <div>
+                  <div class="about-row-cat">Hardware &amp; MakerSpace Ops</div>
+                  <div class="about-row-desc">
+                    Fabrication diagnostics, 3D printing workflows, student
+                    mentorship
+                  </div>
+                </div>
+              </div>
+              <div class="about-row">
+                <span class="about-row-icon">04</span>
+                <div>
+                  <div class="about-row-cat">Systems Engineering</div>
+                  <div class="about-row-desc">
+                    TxCyOS operating system research, memory management, C/C++
+                    &amp; Rust toolchains
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-logo">Safia Nassiri — 2025</div>
-    <div class="footer-links">
-      <a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/safianassiri" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://artstation.com/safiakillspop" target="_blank" rel="noopener">ArtStation</a>
-      <a href="https://bluekillspop.itch.io" target="_blank" rel="noopener">itch.io</a>
-    </div>
-    <div class="footer-copy">Built with HTML, CSS &amp; JS</div>
-  </footer>
-  <script src="assets/js/main.js"></script>
-</body>
+    <!-- CONTACT -->
+    <section class="section cta-section" id="contact">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-label">Contact</div>
+          <h2>Let&rsquo;s connect</h2>
+          <div class="rule"></div>
+          <p>
+            Interested in working together, or want to talk game systems,
+            architecture, or software? LinkedIn is the best way to reach me.
+          </p>
+          <div class="cta-actions">
+            <a
+              href="https://www.linkedin.com/in/safia-nassiri/"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary"
+              >Connect on LinkedIn ↗</a
+            >
+            <a href="pages/resume.html" class="btn-ghost">View Resume</a>
+            <a
+              href="https://github.com/SafiaNassiri"
+              target="_blank"
+              rel="noopener"
+              class="btn-ghost"
+              >GitHub ↗</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">Safia Nassiri — 2026</div>
+      <div class="footer-links">
+        <a
+          href="https://www.linkedin.com/in/safia-nassiri/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/SafiaNassiri" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        <a href="https://bluekillspop.itch.io" target="_blank" rel="noopener"
+          >itch.io</a
+        >
+      </div>
+      <div class="footer-copy">Built with HTML, CSS &amp; JavaScript</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
